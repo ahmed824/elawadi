@@ -650,6 +650,15 @@ h2.about-us-title {
   display: flex;
   flex-direction: column-reverse;
   overflow: hidden;
+  border: 1px solid transparent;
+
+  transition: all 0.3s ease;
+}
+
+#news .news-card:hover {
+  border: 1px solid #cba228;
+  transform: scale(1.02);
+  /* border-image-source: linear-gradient(47.89deg, #CBA228 2.51%, #EFCA5E 82.66%); */
 }
 
 .swiper-slide.swiper-slide-prev {
