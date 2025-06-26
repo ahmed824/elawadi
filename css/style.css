@@ -1392,10 +1392,7 @@ footer p {
   .about-us-container {
     max-width: 120px;
   }
-  .about-us-img {
-    max-width: 120px;
-    height: 120px;
-  }
+
   .about-us-mission-vision {
     display: flex;
     flex-direction: column;
@@ -1473,11 +1470,7 @@ footer p {
   #contact h3 {
     font-size: 14px;
   }
-  .about-us-img,
-  .about-us-container {
-    max-width: 80px;
-    height: 80px;
-  }
+ 
   .footer-logo {
     width: 50px;
   }

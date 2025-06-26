@@ -551,10 +551,10 @@
                         </svg>
                     </div>
 
-                    <div class="info-panel" id="infoPanel">
+                    <!-- <div class="info-panel" id="infoPanel">
                         <h3 id="locationTitle">اختر موقعاً</h3>
                         <p id="locationDescription">مرر للأسفل لبدء الرحلة حول العالم</p>
-                    </div>
+                    </div> -->
 
                    
                 </div>
