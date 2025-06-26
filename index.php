@@ -207,7 +207,7 @@
                     <h3>خدماتنا المتميزة</h3>
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -219,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -242,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -253,7 +253,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -264,7 +264,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -276,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -287,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -299,7 +299,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -312,7 +312,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -325,7 +325,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
@@ -338,7 +338,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3 col-sm-4 mb-4">
                         <div class="card service-card">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">

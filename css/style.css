@@ -189,7 +189,7 @@ li.nav-item {
   font-size: 14px;
   line-height: 28.8px;
   text-align: center;
-
+  white-space: nowrap;
   box-shadow: 0 2px 8px rgba(203, 162, 40, 0.15);
   transition: background 0.4s, box-shadow 0.3s, transform 0.2s;
   outline: none;
@@ -510,6 +510,7 @@ h2.about-us-title {
   border-radius: 16px;
   transition: all 0.3s ease;
   max-width: 262px;
+  height: 290px;
 }
 
 #news .news-card-body {
@@ -1295,6 +1296,11 @@ footer p {
     padding-right: 10px;
   }
 
+  .hero-btn-contact,
+  .hero-btn-services {
+    padding: 10px 44px;
+    font-size: 12px;
+  }
   .contact-info-section .content {
     flex-direction: column !important;
   }
@@ -1315,7 +1321,13 @@ footer p {
   .about-us-img,
   .about-us-container {
     max-width: 150px;
-    height: auto;
+    height: 150px;
+    margin: 44px auto;
+  }
+ 
+  .service-card .card-title {
+    font-size: 14px;
+    max-width: 100%;
   }
   h2.about-us-title {
     font-size: 24px;
