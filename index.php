@@ -880,23 +880,23 @@
         });
 
         // Show location info
-        function showLocationInfo(locationKey) {
-            const location = locations[locationKey];
-            const infoPanel = document.getElementById('infoPanel');
-            // const title = document.getElementById('locationTitle');
-            // const description = document.getElementById('locationDescription');
+        // function showLocationInfo(locationKey) {
+        //     const location = locations[locationKey];
+        //     const infoPanel = document.getElementById('infoPanel');
+        //     const title = document.getElementById('locationTitle');
+        //     const description = document.getElementById('locationDescription');
 
-            // title.textContent = location.title;
-            // description.textContent = location.description;
+        //     title.textContent = location.title;
+        //     description.textContent = location.description;
 
-            // infoPanel.classList.add('active');
+        //     infoPanel.classList.add('active');
 
-            // Show corresponding label
-            document.querySelectorAll('.location-label').forEach(label => {
-                label.classList.remove('active');
-            });
-            document.getElementById(`label-${locationKey}`).classList.add('active');
-        }
+        //     // Show corresponding label
+        //     document.querySelectorAll('.location-label').forEach(label => {
+        //         label.classList.remove('active');
+        //     });
+        //     document.getElementById(`label-${locationKey}`).classList.add('active');
+        // }
 
         // Location marker hover effects
         document.querySelectorAll('.location-marker').forEach(marker => {
