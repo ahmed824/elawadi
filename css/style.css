@@ -717,6 +717,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: fit-content;
   margin: ;
 }
+.date-container span {
+ font-weight: 500;
+font-size: 18px;
+line-height: 100%;
+  text-align: right;
+
+}
 
 /* span.swiper-pagination-bullet {
   width: 8px;
