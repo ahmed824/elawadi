@@ -128,20 +128,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Animate all counters in About Us section
-    document.querySelectorAll('.about-us-counters h4').forEach(counter => {
-        let text = counter.textContent.trim();
-        let prefix = '';
-        let number = text;
-        // Extract prefix (like '+') and number
-        if (/^[^\d]+/.test(text)) {
-            prefix = text.match(/^[^\d]+/)[0];
-            number = text.replace(/^[^\d]+/, '');
-        }
-        number = parseInt(number.replace(/\D/g, ''));
-        counter.dataset.prefix = prefix;
-        animateCounter(counter, number, 2);
-    });
+    // Animate all counters in About Us section, but only when called
+    function startAboutCounters() {
+        document.querySelectorAll('.about-us-counters h4').forEach(counter => {
+            let text = counter.textContent.trim();
+            let prefix = '';
+            let number = text;
+            // Extract prefix (like '+') and number
+            if (/^[^\d]+/.test(text)) {
+                prefix = text.match(/^[^\d]+/)[0];
+                number = text.replace(/^[^\d]+/, '');
+            }
+            number = parseInt(number.replace(/\D/g, ''));
+            counter.dataset.prefix = prefix;
+            animateCounter(counter, number, 2);
+        });
+    }
+    window.startAboutCounters = startAboutCounters;
 
     // Side Nav Elements
     const sideNav = document.getElementById('sideNav');

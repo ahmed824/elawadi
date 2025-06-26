@@ -249,6 +249,7 @@
                 ease: "power2.inOut",
                 onComplete: () => {
                     preloader.style.display = 'none';
+                    if (window.startAboutCounters) window.startAboutCounters();
                 }
             });
         }
