@@ -47,7 +47,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(135deg, rgb(209, 209, 227) 0%, white 50%, rgb(209, 209, 227) 100%);
+        background: linear-gradient(135deg, rgb(70, 70, 77) 0%, white 50%, rgb(209, 209, 227) 100%);
         display: flex;
         flex-direction: column;
         justify-content: center;
