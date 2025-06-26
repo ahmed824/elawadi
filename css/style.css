@@ -662,11 +662,11 @@ h2.about-us-title {
   /* border-image-source: linear-gradient(47.89deg, #CBA228 2.51%, #EFCA5E 82.66%); */
 }
 
-.swiper-slide.swiper-slide-prev {
+.news-swiper .swiper-slide.swiper-slide-prev {
   position: relative; /* Ensure positioning context for overlay */
 }
 
-.swiper-slide.swiper-slide-prev::before {
+.news-swiper .swiper-slide.swiper-slide-prev::before {
   content: "";
   position: absolute;
   top: 0;
@@ -677,12 +677,12 @@ h2.about-us-title {
   z-index: 1; /* Place overlay above content */
 }
 
-.swiper-slide.swiper-slide-active::before,
-.swiper-slide.swiper-slide-next::before {
+.news-swiper .swiper-slide.swiper-slide-active::before,
+.news-swiper .swiper-slide.swiper-slide-next::before {
   content: none;
 }
 
-.swiper-slide::before {
+.news-swiper .swiper-slide::before {
   content: "";
   position: absolute;
   top: 0;
@@ -748,7 +748,7 @@ line-height: 100%;
 
 /* Locations */
 #locations {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #050505 0%, #10101a 50%, #0d1021 100%);
   overflow: hidden;
   color: #ffffff;
   min-height: 100vh;
@@ -1137,10 +1137,11 @@ footer p {
 
 .location-label {
   fill: #ffd700;
-  font-size: 14px;
+  font-size: 12px; /* Reduced from 14px for a narrower footprint */
   font-weight: bold;
   text-anchor: middle;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Slightly smaller shadow for compactness */
+  letter-spacing: -0.5px; /* Tightens character spacing to reduce width */
   pointer-events: none;
   opacity: 1;
 }

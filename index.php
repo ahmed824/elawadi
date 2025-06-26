@@ -551,7 +551,6 @@
                             </defs>
 
                             <!-- Journey path connecting the three locations -->
-                            <!-- Coordinates adjusted for realistic world map positions -->
                             <path id="journeyPath" class="journey-path"
                                 d="M180 210 Q380 100 580 279 Q600 300 620 288" />
 
@@ -568,9 +567,14 @@
 
                             <!-- Location labels -->
                             <text class="location-label" x="180" y="210" id="label-usa">الولايات المتحدة</text>
-                            <text class="location-label" x="580" y="279" id="label-saudi">المملكة العربية
-                                السعودية</text>
-                            <text class="location-label mb-4" x="620" y="288" id="label-uae">الإمارات العربية</text>
+                            <text class="location-label" x="580" y="260" id="label-saudi">
+                                <tspan x="580" dy="0">المملكة العربية</tspan>
+                                <tspan x="580" dy="14">السعودية</tspan>
+                            </text>
+                            <text class="location-label" x="620" y="288" id="label-saudi">
+                                <tspan x="620" dy="0">الإمارات</tspan>
+                                <tspan x="620" dy="14">العربية</tspan>
+                            </text>
                         </svg>
                     </div>
 
@@ -829,8 +833,8 @@
                 autoRotate: false,
                 alignOrigin: [0.5, 0.5]
             },
-            duration: 3, // slower, more calm
-            ease: 'power1.inOut' // gentle ease
+            duration: 1,
+            ease: 'power1.inOut'
         }, 0);
 
         // Animate path drawing (calm, smooth)
@@ -838,7 +842,7 @@
             strokeDashoffset: 2000
         }, {
             strokeDashoffset: 0,
-            duration: 3, // match traveler duration
+            duration: 1,
             ease: 'power1.inOut'
         }, 0);
 
