@@ -26,6 +26,40 @@ h6 {
   font-weight: 700;
 }
 
+/* === Custom Scrollbar Styles === */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #181828;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(47.89deg, #cba228 2.51%, #efca5e 82.66%);
+  border-radius: 8px;
+  min-height: 40px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(47.89deg, #efca5e 2.51%, #cba228 82.66%);
+}
+::-webkit-scrollbar-corner {
+  background: #181828;
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #efca5e #181828;
+}
+
+/* === Selection Color Styles === */
+::selection {
+  background: #efca5e;
+  color: #181828;
+}
+::-moz-selection {
+  background: linear-gradient(47.89deg, #cba228 2.51%, #efca5e 82.66%);
+  color: #181828;
+}
+
+
 .text-primary {
   background: linear-gradient(47.89deg, #cba228 2.51%, #efca5e 82.66%);
   -webkit-background-clip: text;

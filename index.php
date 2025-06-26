@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+<?php include './loader.php'; ?>
     <!-- Header -->
     <header class="header fixed-top">
         <nav class="navbar navbar-expand-lg d-none d-lg-flex">
