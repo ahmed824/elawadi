@@ -566,15 +566,36 @@
                             <circle id="traveler" class="traveler" cx="580" cy="279" />
 
                             <!-- Location labels -->
-                            <text class="location-label" x="180" y="210" id="label-usa">الولايات المتحدة</text>
-                            <text class="location-label" x="580" y="260" id="label-saudi">
-                                <tspan x="580" dy="0">المملكة العربية</tspan>
-                                <tspan x="580" dy="14">السعودية</tspan>
-                            </text>
-                            <text class="location-label" x="620" y="288" id="label-saudi">
-                                <tspan x="620" dy="0">الإمارات</tspan>
-                                <tspan x="620" dy="14">العربية</tspan>
-                            </text>
+                            <foreignObject x="100" y="140" width="180" height="60">
+                                <div xmlns="http://www.w3.org/1999/xhtml"
+                                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFFFF0A; border-radius: 10px; padding: 5px 12px;height: 100%;">
+                                    <span
+                                        style="font-weight: bold; font-size: 14px; color: #fff;">الولايات
+                                        المتحدة</span>
+                                    <span style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">مكتب تمثيلى -
+                                        لندن</span>
+                                </div>
+                            </foreignObject>
+                            <foreignObject x="480" y="200" width="200" height="70">
+                                <div xmlns="http://www.w3.org/1999/xhtml"
+                                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFFFF0A; border-radius: 10px; padding: 5px 12px;height: 100%;">
+                                    <span
+                                        style="font-weight: bold; font-size: 14px; color: #fff;">المملكة
+                                        العربية السعودية</span>
+                                    <span style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">المقر الرئيسي -
+                                        جدة</span>
+                                </div>
+                            </foreignObject>
+                            <foreignObject x="640" y="260" width="180" height="60">
+                                <div xmlns="http://www.w3.org/1999/xhtml"
+                                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFFFF0A; border-radius: 10px; padding: 5px 12px;height: 100%;">
+                                    <span
+                                        style="font-weight: bold; font-size: 14px; color: #fff;">الإمارات
+                                        العربية</span>
+                                    <span style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">مركز الأعمال-
+                                        دبى</span>
+                                </div>
+                            </foreignObject>
                         </svg>
                     </div>
 
