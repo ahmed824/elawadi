@@ -167,7 +167,12 @@ li.nav-item {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #cba228 !important;
+  background: linear-gradient(239deg, #CBA228 5.52%, #EFCA5E 88.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: unset !important;
 }
 
 /* Hero Section */

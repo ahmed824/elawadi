@@ -67,25 +67,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * Navbar links active state on scroll
+     * Navbar links active state on scroll and click (desktop and mobile)
      */
-    let navbarlinks = document.querySelectorAll('#navbarNav .nav-link');
+    let desktopNavbarLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+    let mobileNavbarLinks = document.querySelectorAll('.side-nav-links a[href^="#"]');
+    let allNavbarLinks = [...desktopNavbarLinks, ...mobileNavbarLinks];
 
     function navbarlinksActive() {
-        navbarlinks.forEach(navbarlink => {
+        let position = window.scrollY + 200;
+        allNavbarLinks.forEach(navbarlink => {
             if (!navbarlink.hash) return;
             let section = document.querySelector(navbarlink.hash);
             if (!section) return;
-            let position = window.scrollY + 200;
             if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-                navbarlink.classList.add('active');
-            } else {
-                navbarlink.classList.remove('active');
+                allNavbarLinks.forEach(link => link.classList.remove('active'));
+                // Set active for all links with same hash (desktop & mobile)
+                allNavbarLinks.forEach(link => {
+                    if (link.hash === navbarlink.hash) link.classList.add('active');
+                });
             }
-        })
+        });
     }
     window.addEventListener('load', navbarlinksActive);
     document.addEventListener('scroll', navbarlinksActive);
+
+    // Add click event to nav-links (desktop & mobile)
+    allNavbarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            allNavbarLinks.forEach(l => l.classList.remove('active'));
+            // Set active for all links with same hash
+            allNavbarLinks.forEach(l => {
+                if (l.hash === link.hash) l.classList.add('active');
+            });
+        });
+    });
 
     /**
      * About Us Counters Animation
