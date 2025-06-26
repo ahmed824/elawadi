@@ -128,6 +128,52 @@ document.addEventListener('DOMContentLoaded', () => {
         animateCounter(counter, number, 2);
     });
 
+    // Side Nav Elements
+    const sideNav = document.getElementById('sideNav');
+    const sideNavOverlay = document.getElementById('sideNavOverlay');
+    const openSideNav = document.getElementById('openSideNav');
+    const closeSideNav = document.getElementById('closeSideNav');
+    // Open Side Nav
+    if (openSideNav) {
+        openSideNav.addEventListener('click', function () {
+            sideNav.classList.add('open');
+            sideNavOverlay.classList.add('open');
+        });
+    }
+    // Close Side Nav
+    if (closeSideNav) {
+        closeSideNav.addEventListener('click', function () {
+            sideNav.classList.remove('open');
+            sideNavOverlay.classList.remove('open');
+        });
+    }
+    if (sideNavOverlay) {
+        sideNavOverlay.addEventListener('click', function () {
+            sideNav.classList.remove('open');
+            sideNavOverlay.classList.remove('open');
+        });
+    }
+    // Generate Stars in Side Nav
+    const navStarsBg = document.querySelector('.nav-stars-bg');
+    if (navStarsBg) {
+        for (let i = 0; i < 60; i++) {
+            const star = document.createElement('div');
+            star.className = 'nav-star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.width = (Math.random() * 2 + 1) + 'px';
+            star.style.height = star.style.width;
+            star.style.animationDelay = (Math.random() * 3) + 's';
+            navStarsBg.appendChild(star);
+        }
+    }
+    // Mobile language toggle
+    const langToggleMobile = document.getElementById('lang-toggle-mobile');
+    if (langToggleMobile) {
+        langToggleMobile.addEventListener('click', function () {
+            document.getElementById('lang-toggle').click();
+        });
+    }
 });
 
 // WhatsApp button drop-in animation
