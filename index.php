@@ -91,7 +91,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero d-flex align-items-center justify-content-center">
             <div class="container text-center w-50">
-                <h1>شركة الوادي الدولي</h1>
+                <h1 id="animated-headline" class="typewriter"><span class="text"></span><span class="cursor">|</span></h1>
                 <h2>نربط التقنية بالعالم ونبني المستقبل </h2>
                 <h3>شركة سعودية رائدة تقدم حلولاً تقنية متكاملة، تركز على تمكين التحول الرقمي والأمن السيبراني وخدمات
                     الأنظمة، للجهات الحكومية وكبرى جهات القطاع الخاص </h3>
@@ -1126,6 +1126,36 @@
                     }
                 });
             });
+        });
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const headline = document.getElementById('animated-headline');
+            if (!headline) return;
+            const textSpan = headline.querySelector('.text');
+            const text = "شركة الوادي الدولي";
+            const typingSpeed = 120; // ms per character
+            const erasingSpeed = 60; // ms per character
+            const delayBetween = 1200; // ms before erasing/typing again
+
+            let charIndex = 0;
+            let isErasing = false;
+
+            function typeLoop() {
+                if (!isErasing && charIndex <= text.length) {
+                    textSpan.textContent = text.substring(0, charIndex);
+                    charIndex++;
+                    setTimeout(typeLoop, typingSpeed);
+                } else if (isErasing && charIndex >= 0) {
+                    textSpan.textContent = text.substring(0, charIndex);
+                    charIndex--;
+                    setTimeout(typeLoop, erasingSpeed);
+                } else {
+                    isErasing = !isErasing;
+                    setTimeout(typeLoop, delayBetween);
+                }
+            }
+            typeLoop();
         });
     </script>
 
