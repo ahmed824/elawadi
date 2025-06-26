@@ -22,6 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/Logo.svg">
 </head>
 
 <body>
@@ -102,7 +103,7 @@
         </section>
 
         <!-- About Us Section -->
-        <section id="about" class="py-5">
+        <section id="about" class="py-5 section-fade">
             <img src="./assets/styles/right-style.png" alt="styles circles" class="lines-right">
 
             <div class="container">
@@ -204,7 +205,7 @@
 
                         </div>
                     </div>
-                    <div class="about-us-counters d-flex justify-content-around text-center mt-5">
+                    <div class="about-us-counters d-flex justify-content-around section-fade text-center mt-5">
                         <div class="count-card">
                             <h4 class="mb-0">+300</h4>
                             <span class="small">مشروع منجز</span>
@@ -222,7 +223,7 @@
             </div>
         </section>
         <!-- Services Section -->
-        <section id="services" class=" bg-black">
+        <section id="services" class="bg-black section-fade">
             <img src="./assets/styles/top-style.png" alt="styles circles" class="gold-lines-top">
             <div class="container">
                 <div class="section-title text-center mb-5">
@@ -231,7 +232,7 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service1.png" alt="service1" class="service-img">
@@ -243,7 +244,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service2.png" alt="service2" class="service-img">
@@ -255,7 +256,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service3.png" alt="service3" class="service-img">
@@ -266,7 +267,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service4.png" alt="service4" class="service-img">
@@ -277,7 +278,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service5.png" alt="service5" class="service-img">
@@ -288,7 +289,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service6.png" alt="service6" class="service-img">
@@ -300,7 +301,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service7.png" alt="service7" class="service-img">
@@ -311,7 +312,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service8.png" alt="service8" class="service-img">
@@ -323,7 +324,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service9.png" alt="service9" class="service-img">
@@ -336,7 +337,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service10.png" alt="service10" class="service-img">
@@ -349,7 +350,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service11.png" alt="service11" class="service-img">
@@ -362,7 +363,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-4 mb-4">
-                        <div class="card service-card">
+                        <div class="card service-card section-fade">
                             <div class="card-body">
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service12.png" alt="service12" class="service-img">
@@ -381,7 +382,7 @@
         </section>
 
         <!-- Clients Section -->
-        <section id="clients" class="py-5">
+        <section id="clients" class="py-5 section-fade">
             <div class="section-title text-end mb-4">
                 <h2>شركاؤنا في النجاح</h2>
                 <h3>عملاؤنا وشركاؤنا الكرام</h3>
@@ -424,7 +425,7 @@
         </section>
 
         <!-- Last News Section -->
-        <section id="news" class="py-5 ">
+        <section id="news" class="py-5 section-fade">
             <div class="container">
                 <div class="section-title text-center mb-5">
                     <h2>آخر الأخبار</h2>
@@ -434,7 +435,7 @@
                     <div class="swiper news-swiper overflow-visible px-3">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="news-card">
+                                <div class="news-card section-fade">
                                     <img src="./assets/touch-img.jpg" class="card-img-top" alt="News 2">
                                     <div class="news-card-body">
                                         <div class="d-flex date-container align-items-center mb-2">
@@ -455,7 +456,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="news-card">
+                                <div class="news-card section-fade">
                                     <img src="./assets/touch-img.jpg" class="card-img-top" alt="News 2">
                                     <div class="news-card-body">
                                         <div class="d-flex date-container align-items-center mb-2">
@@ -476,7 +477,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="news-card">
+                                <div class="news-card section-fade">
                                     <img src="./assets/sim.jpg" class="card-img-top" alt="News 3">
                                     <div class="news-card-body">
                                         <div class="d-flex date-container align-items-center mb-2">
@@ -523,7 +524,7 @@
         </section>
 
         <!-- Locations Section -->
-        <section id="locations" class="py-5">
+        <section id="locations" class="py-5 ">
             <div class="locations-pin-wrapper">
                 <div class="container">
                     <div class="section-title text-center mb-5">
@@ -611,11 +612,11 @@
         </section>
 
         <!-- Contact Us Section -->
-        <section id="contact" class="py-5">
+        <section id="contact" class="py-5 section-fade">
             <div class="container">
                 <div class="row justify-content-center">
 
-                    <div class="col-lg-6 yellow-shadow">
+                    <div class="col-lg-6 yellow-shadow section-fade">
                         <form>
                             <h4 class="mb-4">من فضلك املأ البيانات التالية</h4>
                             <div class="form-group mb-4">
@@ -657,7 +658,7 @@
                         <h2>تواصل معنا</h2>
                         <h3>اترك لنا رسالتك
                             فنحن هنا لاستقبال طلبك.</h3>
-                        <div class="social-media-container">
+                        <div class="social-media-container section-fade">
                             <img src="./assets/styles/v.png" alt="decoratin V shape" class="v-img">
                             <a href="https://www.linkedin.com/" target="_blank" class="social-icon icon-linkedin"
                                 aria-label="LinkedIn">
@@ -1100,6 +1101,28 @@
                     if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
                         var bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
                         bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Optimized GSAP fade-in for all main sections
+        document.addEventListener('DOMContentLoaded', function () {
+            gsap.utils.toArray('.section-fade').forEach(section => {
+                gsap.fromTo(section, {
+                    opacity: 0,
+                    y: 60
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
                     }
                 });
             });
