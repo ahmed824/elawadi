@@ -85,6 +85,9 @@
         <button class="side-nav-toggler d-lg-none" id="openSideNav" aria-label="فتح القائمة">
             <i class="fa-solid fa-bars text-white"></i>
         </button>
+
+        <img class="logo" src="./assets/Logo.svg" alt="logo">
+
     </header>
 
     <main>
@@ -617,7 +620,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-lg-6 yellow-shadow section-fade">
-                        <form>
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)">
                             <h4 class="mb-4">من فضلك املأ البيانات التالية</h4>
                             <div class="form-group mb-4">
                                 <label for="name" class="mb-2">الاسم</label>
@@ -651,7 +654,15 @@
                                         placeholder="الرسالة" required></textarea>
                                 </div>
                             </div>
-                            <div class="text-center"><button type="submit" class="btn btn-primary">إرسال</button></div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary" id="submitBtn">
+                                    <span class="btn-text">إرسال</span>
+                                    <span class="btn-loading d-none">
+                                        <i class="fa-solid fa-spinner fa-spin me-2"></i>
+                                        جاري الإرسال...
+                                    </span>
+                                </button>
+                            </div>
                         </form>
                     </div>
                     <div class="col-lg-6 section-title text-center mb-5 mt-4 mt-lg-0 ">
@@ -760,6 +771,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    
+ 
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const langToggle = document.getElementById('lang-toggle');
@@ -805,7 +819,8 @@
                 // Remove pin here, pinning is handled above
                 onUpdate: (self) => {
                     const progress = self.progress * 100;
-                    document.getElementById('progressFill').style.width = progress + '%';
+                    // Remove the progressFill reference since the element doesn't exist
+                    // document.getElementById('progressFill').style.width = progress + '%';
                     if (progress < 33) {
                         showLocationInfo('usa');
                     } else if (progress < 66) {
@@ -880,24 +895,31 @@
             delay: 0.5
         });
 
-        // Show location info
-        // function showLocationInfo(locationKey) {
-        //     const location = locations[locationKey];
-        //     const infoPanel = document.getElementById('infoPanel');
-        //     const title = document.getElementById('locationTitle');
-        //     const description = document.getElementById('locationDescription');
+        // Show location info - Uncommented and fixed
+        function showLocationInfo(locationKey) {
+            const location = locations[locationKey];
+            // Check if infoPanel exists before trying to use it
+            const infoPanel = document.getElementById('infoPanel');
+            if (infoPanel) {
+                const title = document.getElementById('locationTitle');
+                const description = document.getElementById('locationDescription');
+                
+                if (title && description) {
+                    title.textContent = location.title;
+                    description.textContent = location.description;
+                    infoPanel.classList.add('active');
+                }
+            }
 
-        //     title.textContent = location.title;
-        //     description.textContent = location.description;
-
-        //     infoPanel.classList.add('active');
-
-        //     // Show corresponding label
-        //     document.querySelectorAll('.location-label').forEach(label => {
-        //         label.classList.remove('active');
-        //     });
-        //     document.getElementById(`label-${locationKey}`).classList.add('active');
-        // }
+            // Show corresponding label if it exists
+            document.querySelectorAll('.location-label').forEach(label => {
+                label.classList.remove('active');
+            });
+            const labelElement = document.getElementById(`label-${locationKey}`);
+            if (labelElement) {
+                labelElement.classList.add('active');
+            }
+        }
 
         // Location marker hover effects
         document.querySelectorAll('.location-marker').forEach(marker => {
@@ -940,9 +962,11 @@
             delay: 1.2
         });
 
-        // Initial info panel state
+        // Initial info panel state - Only call if showLocationInfo function exists
         setTimeout(() => {
-            showLocationInfo('usa');
+            if (typeof showLocationInfo === 'function') {
+                showLocationInfo('usa');
+            }
         }, 2000);
     </script>
 
@@ -1158,6 +1182,11 @@
             typeLoop();
         });
     </script>
+
+    <!-- Toast Notification System -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+        <!-- Toasts will be dynamically added here -->
+    </div>
 
 </body>
 

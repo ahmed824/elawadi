@@ -140,6 +140,7 @@ html {
   color: #b0ada4 !important;
   margin: 0 10px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .navbar-expand-lg {
@@ -893,7 +894,7 @@ input#phone {
 }
 
 textarea.form-control {
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 .form-control:focus {
   background: transparent;
@@ -1095,7 +1096,7 @@ footer p {
 }
 
 .scroll-container {
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 
@@ -1419,6 +1420,13 @@ footer p {
     width: 120px;
     height: auto;
   }
+  .logo {
+    max-width: 72px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    margin-left: 20px;
+}
   footer {
     padding: 40px 0 80px 0;
   }
@@ -1563,14 +1571,7 @@ img,
     justify-content: center;
     align-items: center;
   }
-  .logo {
-    margin-bottom: 0;
-    max-width: 120px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+ 
   li.nav-item {
     padding: 16px 0;
     width: 100%;
@@ -1690,7 +1691,7 @@ img,
   pointer-events: auto;
 }
 .side-nav-toggler {
-  position: fixed;
+  position: absolute;
   top: 24px;
   right: 24px;
   z-index: 100;
@@ -1719,6 +1720,10 @@ img,
   .side-nav-overlay,
   .side-nav-toggler {
     display: block;
+  }
+
+  .fixed-top {
+    position: absolute;
   }
 }
 /* === Starry Background for Side Nav === */
@@ -1796,5 +1801,105 @@ img,
     font-size: 24px;
     height: 32px;
     line-height: 32px;
+  }
+}
+
+/* === Toast Notification Styles === */
+.toast-container {
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toast-body {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 16px 20px;
+}
+
+.btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+/* Toast animation */
+.toast.show {
+  animation: toastSlideIn 0.3s ease-out;
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Form button loading state */
+.btn-loading {
+  display: none;
+}
+
+.btn-loading.d-none {
+  display: none !important;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Form validation styles */
+.form-control.is-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-valid {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Responsive toast adjustments */
+@media (max-width: 768px) {
+  .toast {
+    min-width: 280px;
+    max-width: 90vw;
+    margin: 0 10px;
+  }
+
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 33% !important;
+  }
+
+  .toast-body {
+    font-size: 13px;
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .toast-container {
+    top: 10px !important;
+    right: 10px !important;
+    left: 10px !important;
+  }
+
+  .toast {
+    min-width: auto;
+    max-width: none;
+    margin: 0;
   }
 }

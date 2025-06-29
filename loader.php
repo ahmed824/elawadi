@@ -47,7 +47,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(135deg, rgb(70, 70, 77) 0%, white 50%, rgb(209, 209, 227) 100%);
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #16213e 75%, #1a1a2e 100%);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -82,7 +82,7 @@
         transform: translate(-50%, -50%);
         width: 200px;
         height: 200px;
-        background: radial-gradient(circle, rgba(203, 162, 40, 0.10) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(203, 162, 40, 0.25) 0%, rgba(239, 202, 94, 0.15) 30%, transparent 70%);
         border-radius: 50%;
         animation: elwady-pulse 2s infinite;
         z-index: 1;
@@ -100,24 +100,24 @@
     }
 
     .elwady-loading-text {
-        color: #181828;
+        color: #ffffff;
         font-size: 1.3rem;
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-bottom: 1rem;
         opacity: 0.95;
-        text-shadow: 0 2px 8px rgba(203, 162, 40, 0.08);
+        text-shadow: 0 2px 8px rgba(203, 162, 40, 0.3), 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .elwady-progress-container {
         width: 220px;
         height: 5px;
-        background: rgba(203, 162, 40, 0.10);
+        background: rgba(255, 255, 255, 0.15);
         border-radius: 2px;
         overflow: hidden;
         margin-bottom: 1rem;
-        box-shadow: 0 2px 8px rgba(203, 162, 40, 0.08);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.1);
     }
 
     .elwady-progress-bar {
@@ -130,11 +130,11 @@
     }
 
     .elwady-percentage {
-        color: #181828;
+        color: #ffffff;
         font-size: 1rem;
         font-weight: 600;
-        opacity: 0.85;
-        text-shadow: 0 1px 4px #efca5e22;
+        opacity: 0.9;
+        text-shadow: 0 1px 4px #efca5e40, 0 1px 2px rgba(0, 0, 0, 0.3);
     }
 
     .elwady-floating-particles {

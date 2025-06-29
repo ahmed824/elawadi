@@ -203,4 +203,122 @@ window.addEventListener('DOMContentLoaded', function() {
             waBtn.classList.remove('wa-drop-in');
         }, 700); // match CSS animation duration
     }
-}); 
+});
+
+/**
+ * Form Submission Handler
+ */
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+    
+    // Get form data
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
+    
+    // Validate form
+    if (!name || !email || !phone || !message) {
+        showToast('يرجى ملء جميع الحقول المطلوبة', 'error');
+        return;
+    }
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    btnText.classList.add('d-none');
+    btnLoading.classList.remove('d-none');
+    
+    // Create WhatsApp message
+    const whatsappMessage = `مرحباً، لدي استفسار جديد:
+
+الاسم: ${name}
+البريد الإلكتروني: ${email}
+رقم الجوال: ${phone}
+الرسالة: ${message}
+
+شكراً لكم.`;
+    
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappNumber = '00966548010732';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Simulate processing delay
+    setTimeout(() => {
+        // Open WhatsApp
+        window.open(whatsappUrl, '_blank');
+        
+        // Show success toast
+        showToast('تم إرسال رسالتك بنجاح! سيتم التواصل معك قريباً.', 'success');
+        
+        // Reset form
+        form.reset();
+        
+        // Reset button state
+        submitBtn.disabled = false;
+        btnText.classList.remove('d-none');
+        btnLoading.classList.add('d-none');
+        
+    }, 1500);
+}
+
+/**
+ * Toast Notification System
+ */
+function showToast(message, type = 'info') {
+    const toastContainer = document.getElementById('toastContainer');
+    
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = `toast align-items-center text-white border-0`;
+    toast.setAttribute('role', 'alert');
+    toast.setAttribute('aria-live', 'assertive');
+    toast.setAttribute('aria-atomic', 'true');
+    
+    // Set background color based on type
+    switch(type) {
+        case 'success':
+            toast.style.backgroundColor = '#28a745';
+            break;
+        case 'error':
+            toast.style.backgroundColor = '#dc3545';
+            break;
+        case 'warning':
+            toast.style.backgroundColor = '#ffc107';
+            toast.style.color = '#000';
+            break;
+        default:
+            toast.style.backgroundColor = '#17a2b8';
+    }
+    
+    toast.innerHTML = `
+        <div class="d-flex">
+            <div class="toast-body">
+                ${message}
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    `;
+    
+    // Add toast to container
+    toastContainer.appendChild(toast);
+    
+    // Initialize and show toast
+    const bsToast = new bootstrap.Toast(toast, {
+        autohide: true,
+        delay: 5000
+    });
+    
+    bsToast.show();
+    
+    // Remove toast element after it's hidden
+    toast.addEventListener('hidden.bs.toast', () => {
+        toast.remove();
+    });
+} 
