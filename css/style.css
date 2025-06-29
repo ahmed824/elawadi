@@ -98,9 +98,12 @@ html {
 }
 
 /* Header */
-.header {
+ 
+
+.blur-bg {
   backdrop-filter: blur(2px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px -6px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -672,7 +675,13 @@ h2.about-us-title {
   bottom: 0;
   transform: translateX(-50%);
   top: 60%;
-  margin-right: 110px;
+  margin-right: 122px;
+}
+
+.client-img {
+  height: 250px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* News */
@@ -976,6 +985,7 @@ textarea.form-control {
   display: flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
 }
 
 .contact-info-icon {

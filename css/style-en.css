@@ -93,15 +93,18 @@ html {
   height: 2px;
   background: linear-gradient(230.68deg, #cba228 2.51%, #efca5e 90.87%);
   bottom: 0;
-  left: 50%;
+  left: 170%;
   transform: translateX(-50%);
   top: 35%;
 }
 
 /* Header */
-.header {
+ 
+
+.blur-bg {
   backdrop-filter: blur(2px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px -6px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -671,7 +674,7 @@ h2.about-us-title {
   bottom: 0;
   transform: translateX(-50%);
   top: 60%;
-  margin-left: 110px;
+  margin-left: 310px;
 }
 
 /* News */
@@ -953,6 +956,7 @@ textarea.form-control {
   display: flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
 }
 
 .contact-info-icon {

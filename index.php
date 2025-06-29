@@ -26,34 +26,41 @@
 </head>
 
 <body>
-<?php include './loader.php'; ?>
+    <?php include './loader.php'; ?>
     <!-- Header -->
     <header class="header fixed-top">
         <nav class="navbar navbar-expand-lg d-none d-lg-flex">
             <div class="container">
                 <!-- Desktop Navbar (unchanged) -->
                 <ul class="navbar-nav m-auto">
-                    <li class="nav-item"><a class="nav-link" href="#hero">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#clients">عملاؤنا</a></li>
-                    <li>
-                        <a class="navbar-brand" href="#">
-                            <img class="logo" src="./assets/Logo.svg" alt="logo">
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#news">المدونة</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#locations">أماكن تواجدنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
-                    <li class="nav-item"><button id="lang-toggle" class="btn nav-link">
-                            EN
-                            <svg class="lang-svg me-1" width="13" height="13" viewBox="0 0 13 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9.55723 10.5567C9.47338 10.5305 9.38771 10.5044 9.30142 10.4771C9.34517 10.2913 9.38588 10.0879 9.42295 9.87356C9.60098 9.75152 9.77901 9.62583 9.95401 9.4971C9.96312 9.60822 9.9692 9.71569 9.97467 9.82195C9.83856 10.0855 9.69942 10.3326 9.55723 10.5567ZM4.7856 2.21322C4.88708 2.13489 4.98855 2.06203 5.08759 1.9922C5.09184 1.94059 5.0967 1.89201 5.10157 1.84465C5.20061 1.8064 5.29843 1.76875 5.39505 1.73414C5.5111 1.88716 5.64478 2.07781 5.79 2.29883C5.74382 2.3468 5.69764 2.39598 5.65085 2.44638C5.49409 2.49981 5.33489 2.55568 5.1763 2.61214C5.19453 2.44031 5.21458 2.28062 5.23706 2.13671C5.1757 2.23508 5.11372 2.33951 5.05053 2.44881C4.94176 2.45245 4.833 2.4567 4.72545 2.46095C4.74489 2.37412 4.76494 2.29155 4.7856 2.21322ZM12.9319 6.40467C12.777 6.59351 12.5947 6.79327 12.3906 7.00154C12.3869 7.12662 12.3827 7.25292 12.3778 7.378C12.3006 7.48608 12.221 7.59477 12.1372 7.70528C12.0576 7.37922 11.967 7.0404 11.8625 6.69491C11.7465 6.51093 11.6219 6.32331 11.4901 6.13265C11.1826 6.05614 10.8496 5.97842 10.4984 5.89827C10.3945 5.79869 10.2876 5.69972 10.1794 5.59953C10.1272 5.63111 10.0761 5.66207 10.0239 5.69304C10.1059 5.89099 10.1855 6.08893 10.2621 6.28748C10.3806 6.22312 10.4984 6.15815 10.6115 6.095C10.7658 6.22737 10.9147 6.35792 11.0574 6.48543C10.6345 6.78113 10.1679 7.09201 9.67633 7.40593C9.44239 6.89285 9.18537 6.35792 8.91498 5.82662C8.85908 5.83512 8.80318 5.84423 8.74728 5.85334C9.02557 6.48604 9.29292 7.12419 9.52503 7.72957C9.78084 7.60023 10.0306 7.47151 10.2718 7.34461C10.1892 7.63059 10.1004 7.91537 10.0069 8.19407C9.75167 8.4333 9.48796 8.66889 9.22243 8.89902C9.2352 9.22326 9.24188 9.53232 9.24066 9.81831C9.09301 9.91971 8.94597 10.0181 8.79771 10.1134C8.49512 10.519 8.19617 10.8706 7.91241 11.1414C7.67422 11.173 7.43725 11.2009 7.2021 11.2282C7.02529 10.9513 6.81566 10.5731 6.58719 10.1237C6.64127 9.91789 6.699 9.69809 6.75733 9.46553C6.61332 9.06114 6.46081 8.61971 6.30647 8.16007C5.78939 8.19164 5.27777 8.21896 4.7777 8.24143C4.48848 7.96941 4.2029 7.69192 3.92461 7.41322C3.96107 6.96632 4.00664 6.50972 4.0595 6.05553C4.33111 5.71672 4.61182 5.37791 4.89376 5.04517C5.42603 4.9468 5.96985 4.85147 6.51003 4.761C6.54405 4.90005 6.57747 5.04031 6.6115 5.18118C6.83328 5.32265 7.05567 5.46716 7.27866 5.61168C7.36373 5.49327 7.44697 5.37548 7.53022 5.26011C7.86805 5.34755 8.20285 5.4362 8.53218 5.52546C8.61603 5.47445 8.69928 5.42405 8.78191 5.37426C8.81594 5.2504 8.84753 5.12835 8.87974 5.00752C8.65674 4.96623 8.4301 4.92373 8.20164 4.88244C8.12447 4.75675 8.04669 4.63106 7.96953 4.50719C7.91423 4.48108 7.86015 4.45437 7.80608 4.42704C7.76354 4.58066 7.7204 4.73732 7.67544 4.8958C7.57093 4.76829 7.46702 4.6426 7.36251 4.51812C7.36798 4.4149 7.37345 4.31289 7.3771 4.2121C7.24038 4.10948 7.10428 4.00929 6.96939 3.91093C6.88857 3.87328 6.80837 3.83624 6.72816 3.79981C6.73606 3.89636 6.74214 3.99472 6.75003 4.0943C6.91834 4.20117 7.08909 4.30986 7.25983 4.42097C7.17354 4.51569 7.08666 4.61284 6.99855 4.71182C6.87338 4.55334 6.75003 4.3979 6.62912 4.2461C6.54101 4.15077 6.45473 4.05666 6.36784 3.96436C6.16611 4.05726 5.96256 4.15381 5.75901 4.25096C5.61318 4.46105 5.46553 4.67721 5.31849 4.89762C5.10339 4.86726 4.89072 4.83811 4.67988 4.80958C4.67684 4.54787 4.67623 4.29225 4.67806 4.04755C4.94358 4.05848 5.21215 4.07062 5.48437 4.08519C5.40294 3.95647 5.32274 3.83017 5.24375 3.70752C5.19757 3.60733 5.152 3.50897 5.10703 3.41425C5.30998 3.35231 5.51353 3.29099 5.71587 3.2327C5.83132 3.10336 5.94433 2.97889 6.05674 2.85988C6.14545 2.85441 6.23477 2.84834 6.32288 2.84288C6.30587 2.77669 6.28824 2.71172 6.27123 2.64918C6.32956 2.58968 6.38546 2.53382 6.44136 2.47735C6.4839 2.56964 6.52704 2.66618 6.57018 2.76637C6.81687 2.77123 7.06357 2.77852 7.30965 2.78641C7.37284 2.64675 7.43178 2.51439 7.4889 2.39052C7.58247 2.41481 7.67605 2.4397 7.76962 2.46399C7.73073 2.37655 7.69184 2.29337 7.65356 2.21383C7.78967 2.18589 7.92213 2.15918 8.05459 2.13368C8.00659 2.09785 7.95859 2.06385 7.91119 2.03045C7.79332 2.04928 7.67301 2.06992 7.55148 2.09117C7.50044 2.02074 7.45001 1.95395 7.40079 1.8908C7.39411 1.8908 7.38803 1.89019 7.38135 1.89019C7.38378 1.88533 7.38621 1.88108 7.38925 1.87623C7.3692 1.85012 7.34793 1.82461 7.32727 1.80093C7.37284 1.78211 7.41842 1.76329 7.46277 1.74629C7.49862 1.68557 7.52779 1.64064 7.55999 1.59145C7.51563 1.58781 7.47067 1.58356 7.42631 1.57992C7.36312 1.61817 7.29811 1.66189 7.23188 1.70743C7.17841 1.77665 7.12251 1.85497 7.06417 1.93877C7.13709 1.98674 7.21061 2.03531 7.28474 2.08631C7.22337 2.21018 7.16018 2.34741 7.09212 2.49435C6.98214 2.52592 6.87156 2.5575 6.75915 2.59028C6.69596 2.43788 6.63337 2.2964 6.57322 2.16586C6.44744 2.21504 6.31863 2.26544 6.1892 2.31887C6.12905 2.29215 6.07011 2.26726 6.01117 2.24176C6.02454 2.11242 6.03912 1.99281 6.0537 1.88655C6.16186 1.83676 6.26759 1.79122 6.37088 1.74811C6.45959 1.63456 6.54466 1.54106 6.62365 1.4688C6.82416 1.42812 7.01678 1.39472 7.20028 1.3674C7.66632 1.38865 8.15303 1.42265 8.6458 1.46394C9.32877 1.44087 10.157 1.41112 10.5221 1.39351C9.41566 0.5234 8.02178 0 6.50456 0C4.95634 0 3.53634 0.542831 2.41954 1.44512C2.49427 1.45544 2.5684 1.46637 2.64375 1.47791C2.6881 1.58902 2.73854 1.70925 2.79808 1.84404C2.81753 1.91266 2.83879 1.98613 2.86188 2.06203C2.74401 2.17436 2.62795 2.2958 2.51493 2.42513C2.49124 2.48888 2.46815 2.55325 2.44566 2.62004C2.35938 2.66861 2.27553 2.7184 2.19168 2.76819C2.13699 2.94974 2.08656 3.14162 2.03978 3.34078C1.93709 3.3262 1.83562 3.31224 1.73779 3.29888C1.66913 2.90178 1.62963 2.56053 1.59804 2.24115C1.29605 2.58786 1.02688 2.96432 0.802664 3.37053C0.836083 3.3426 0.867072 3.31527 0.901098 3.28795C0.987988 3.72695 1.0925 4.20845 1.23468 4.73246C0.9491 4.91644 0.692685 5.09921 0.471512 5.27529C0.310493 5.42405 0.171956 5.57039 0.0522552 5.71065C0.0212667 5.96931 0 6.23223 0 6.49939C0 7.05376 0.0771675 7.5893 0.207198 8.1036C0.322645 8.14549 0.448422 8.18678 0.588175 8.22746C0.800841 8.47034 1.04328 8.71686 1.31003 8.96035C1.36836 9.13461 1.43033 9.30584 1.49535 9.47403C1.84169 9.68958 2.22024 9.89846 2.61458 10.0946C2.49549 10.4638 2.40374 10.785 2.33508 11.0624C2.18135 11.0667 2.03248 11.0703 1.88544 11.0734C3.06301 12.2629 4.6975 13 6.50516 13C10.0366 13 12.9046 10.1851 13 6.67851C12.9763 6.58683 12.9575 6.49757 12.9319 6.40467Z"
-                                    fill="#B0ADA4" />
-                            </svg>
-                        </button></li>
+                    <div class="blur-bg">
+                        <li class="nav-item"><a class="nav-link" href="#hero">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#clients">عملاؤنا</a></li>
+                    </div>
+                    <div class="blur-bg-mid">
+
+                        <li>
+                            <a class="navbar-brand" href="#">
+                                <img class="logo" src="./assets/Logo.svg" alt="logo">
+                            </a>
+                        </li>
+                    </div>
+                    <div class="blur-bg">
+                        <li class="nav-item"><a class="nav-link" href="#news">المدونة</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#locations">أماكن تواجدنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+                        <li class="nav-item"><button id="lang-toggle" class="btn nav-link">
+                                EN
+                                <svg class="lang-svg me-1" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.55723 10.5567C9.47338 10.5305 9.38771 10.5044 9.30142 10.4771C9.34517 10.2913 9.38588 10.0879 9.42295 9.87356C9.60098 9.75152 9.77901 9.62583 9.95401 9.4971C9.96312 9.60822 9.9692 9.71569 9.97467 9.82195C9.83856 10.0855 9.69942 10.3326 9.55723 10.5567ZM4.7856 2.21322C4.88708 2.13489 4.98855 2.06203 5.08759 1.9922C5.09184 1.94059 5.0967 1.89201 5.10157 1.84465C5.20061 1.8064 5.29843 1.76875 5.39505 1.73414C5.5111 1.88716 5.64478 2.07781 5.79 2.29883C5.74382 2.3468 5.69764 2.39598 5.65085 2.44638C5.49409 2.49981 5.33489 2.55568 5.1763 2.61214C5.19453 2.44031 5.21458 2.28062 5.23706 2.13671C5.1757 2.23508 5.11372 2.33951 5.05053 2.44881C4.94176 2.45245 4.833 2.4567 4.72545 2.46095C4.74489 2.37412 4.76494 2.29155 4.7856 2.21322ZM12.9319 6.40467C12.777 6.59351 12.5947 6.79327 12.3906 7.00154C12.3869 7.12662 12.3827 7.25292 12.3778 7.378C12.3006 7.48608 12.221 7.59477 12.1372 7.70528C12.0576 7.37922 11.967 7.0404 11.8625 6.69491C11.7465 6.51093 11.6219 6.32331 11.4901 6.13265C11.1826 6.05614 10.8496 5.97842 10.4984 5.89827C10.3945 5.79869 10.2876 5.69972 10.1794 5.59953C10.1272 5.63111 10.0761 5.66207 10.0239 5.69304C10.1059 5.89099 10.1855 6.08893 10.2621 6.28748C10.3806 6.22312 10.4984 6.15815 10.6115 6.095C10.7658 6.22737 10.9147 6.35792 11.0574 6.48543C10.6345 6.78113 10.1679 7.09201 9.67633 7.40593C9.44239 6.89285 9.18537 6.35792 8.91498 5.82662C8.85908 5.83512 8.80318 5.84423 8.74728 5.85334C9.02557 6.48604 9.29292 7.12419 9.52503 7.72957C9.78084 7.60023 10.0306 7.47151 10.2718 7.34461C10.1892 7.63059 10.1004 7.91537 10.0069 8.19407C9.75167 8.4333 9.48796 8.66889 9.22243 8.89902C9.2352 9.22326 9.24188 9.53232 9.24066 9.81831C9.09301 9.91971 8.94597 10.0181 8.79771 10.1134C8.49512 10.519 8.19617 10.8706 7.91241 11.1414C7.67422 11.173 7.43725 11.2009 7.2021 11.2282C7.02529 10.9513 6.81566 10.5731 6.58719 10.1237C6.64127 9.91789 6.699 9.69809 6.75733 9.46553C6.61332 9.06114 6.46081 8.61971 6.30647 8.16007C5.78939 8.19164 5.27777 8.21896 4.7777 8.24143C4.48848 7.96941 4.2029 7.69192 3.92461 7.41322C3.96107 6.96632 4.00664 6.50972 4.0595 6.05553C4.33111 5.71672 4.61182 5.37791 4.89376 5.04517C5.42603 4.9468 5.96985 4.85147 6.51003 4.761C6.54405 4.90005 6.57747 5.04031 6.6115 5.18118C6.83328 5.32265 7.05567 5.46716 7.27866 5.61168C7.36373 5.49327 7.44697 5.37548 7.53022 5.26011C7.86805 5.34755 8.20285 5.4362 8.53218 5.52546C8.61603 5.47445 8.69928 5.42405 8.78191 5.37426C8.81594 5.2504 8.84753 5.12835 8.87974 5.00752C8.65674 4.96623 8.4301 4.92373 8.20164 4.88244C8.12447 4.75675 8.04669 4.63106 7.96953 4.50719C7.91423 4.48108 7.86015 4.45437 7.80608 4.42704C7.76354 4.58066 7.7204 4.73732 7.67544 4.8958C7.57093 4.76829 7.46702 4.6426 7.36251 4.51812C7.36798 4.4149 7.37345 4.31289 7.3771 4.2121C7.24038 4.10948 7.10428 4.00929 6.96939 3.91093C6.88857 3.87328 6.80837 3.83624 6.72816 3.79981C6.73606 3.89636 6.74214 3.99472 6.75003 4.0943C6.91834 4.20117 7.08909 4.30986 7.25983 4.42097C7.17354 4.51569 7.08666 4.61284 6.99855 4.71182C6.87338 4.55334 6.75003 4.3979 6.62912 4.2461C6.54101 4.15077 6.45473 4.05666 6.36784 3.96436C6.16611 4.05726 5.96256 4.15381 5.75901 4.25096C5.61318 4.46105 5.46553 4.67721 5.31849 4.89762C5.10339 4.86726 4.89072 4.83811 4.67988 4.80958C4.67684 4.54787 4.67623 4.29225 4.67806 4.04755C4.94358 4.05848 5.21215 4.07062 5.48437 4.08519C5.40294 3.95647 5.32274 3.83017 5.24375 3.70752C5.19757 3.60733 5.152 3.50897 5.10703 3.41425C5.30998 3.35231 5.51353 3.29099 5.71587 3.2327C5.83132 3.10336 5.94433 2.97889 6.05674 2.85988C6.14545 2.85441 6.23477 2.84834 6.32288 2.84288C6.30587 2.77669 6.28824 2.71172 6.27123 2.64918C6.32956 2.58968 6.38546 2.53382 6.44136 2.47735C6.4839 2.56964 6.52704 2.66618 6.57018 2.76637C6.81687 2.77123 7.06357 2.77852 7.30965 2.78641C7.37284 2.64675 7.43178 2.51439 7.4889 2.39052C7.58247 2.41481 7.67605 2.4397 7.76962 2.46399C7.73073 2.37655 7.69184 2.29337 7.65356 2.21383C7.78967 2.18589 7.92213 2.15918 8.05459 2.13368C8.00659 2.09785 7.95859 2.06385 7.91119 2.03045C7.79332 2.04928 7.67301 2.06992 7.55148 2.09117C7.50044 2.02074 7.45001 1.95395 7.40079 1.8908C7.39411 1.8908 7.38803 1.89019 7.38135 1.89019C7.38378 1.88533 7.38621 1.88108 7.38925 1.87623C7.3692 1.85012 7.34793 1.82461 7.32727 1.80093C7.37284 1.78211 7.41842 1.76329 7.46277 1.74629C7.49862 1.68557 7.52779 1.64064 7.55999 1.59145C7.51563 1.58781 7.47067 1.58356 7.42631 1.57992C7.36312 1.61817 7.29811 1.66189 7.23188 1.70743C7.17841 1.77665 7.12251 1.85497 7.06417 1.93877C7.13709 1.98674 7.21061 2.03531 7.28474 2.08631C7.22337 2.21018 7.16018 2.34741 7.09212 2.49435C6.98214 2.52592 6.87156 2.5575 6.75915 2.59028C6.69596 2.43788 6.63337 2.2964 6.57322 2.16586C6.44744 2.21504 6.31863 2.26544 6.1892 2.31887C6.12905 2.29215 6.07011 2.26726 6.01117 2.24176C6.02454 2.11242 6.03912 1.99281 6.0537 1.88655C6.16186 1.83676 6.26759 1.79122 6.37088 1.74811C6.45959 1.63456 6.54466 1.54106 6.62365 1.4688C6.82416 1.42812 7.01678 1.39472 7.20028 1.3674C7.66632 1.38865 8.15303 1.42265 8.6458 1.46394C9.32877 1.44087 10.157 1.41112 10.5221 1.39351C9.41566 0.5234 8.02178 0 6.50456 0C4.95634 0 3.53634 0.542831 2.41954 1.44512C2.49427 1.45544 2.5684 1.46637 2.64375 1.47791C2.6881 1.58902 2.73854 1.70925 2.79808 1.84404C2.81753 1.91266 2.83879 1.98613 2.86188 2.06203C2.74401 2.17436 2.62795 2.2958 2.51493 2.42513C2.49124 2.48888 2.46815 2.55325 2.44566 2.62004C2.35938 2.66861 2.27553 2.7184 2.19168 2.76819C2.13699 2.94974 2.08656 3.14162 2.03978 3.34078C1.93709 3.3262 1.83562 3.31224 1.73779 3.29888C1.66913 2.90178 1.62963 2.56053 1.59804 2.24115C1.29605 2.58786 1.02688 2.96432 0.802664 3.37053C0.836083 3.3426 0.867072 3.31527 0.901098 3.28795C0.987988 3.72695 1.0925 4.20845 1.23468 4.73246C0.9491 4.91644 0.692685 5.09921 0.471512 5.27529C0.310493 5.42405 0.171956 5.57039 0.0522552 5.71065C0.0212667 5.96931 0 6.23223 0 6.49939C0 7.05376 0.0771675 7.5893 0.207198 8.1036C0.322645 8.14549 0.448422 8.18678 0.588175 8.22746C0.800841 8.47034 1.04328 8.71686 1.31003 8.96035C1.36836 9.13461 1.43033 9.30584 1.49535 9.47403C1.84169 9.68958 2.22024 9.89846 2.61458 10.0946C2.49549 10.4638 2.40374 10.785 2.33508 11.0624C2.18135 11.0667 2.03248 11.0703 1.88544 11.0734C3.06301 12.2629 4.6975 13 6.50516 13C10.0366 13 12.9046 10.1851 13 6.67851C12.9763 6.58683 12.9575 6.49757 12.9319 6.40467Z"
+                                        fill="#B0ADA4" />
+                                </svg>
+                            </button></li>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -94,10 +101,11 @@
         <!-- Hero Section -->
         <section id="hero" class="hero d-flex align-items-center justify-content-center">
             <div class="container text-center w-50">
-                <h1 id="animated-headline" class="typewriter"><span class="text"></span><span class="cursor">|</span></h1>
+                <h1 id="animated-headline" class="typewriter"><span class="text"></span><span class="cursor">|</span>
+                </h1>
                 <h2>نربط التقنية بالعالم ونبني المستقبل </h2>
-                <h3>شركة سعودية رائدة تقدم حلولاً تقنية متكاملة، تركز على تمكين التحول الرقمي والأمن السيبراني وخدمات
-                    الأنظمة، للجهات الحكومية وكبرى جهات القطاع الخاص </h3>
+                <h3> لتمكين عملائنا من تحقيق التميز التشغيلي والنمو المستدام من خلال خبراءنا وشركاءنا المحليين الدوليين.
+                </h3>
                 <div class="hero-buttons mt-4 d-flex justify-content-center gap-3">
                     <a href="#contact" class="btn hero-btn-contact">تواصل معنا</a>
                     <a href="#services" class="btn hero-btn-services">اكتشف خدماتنا</a>
@@ -230,8 +238,8 @@
             <img src="./assets/styles/top-style.png" alt="styles circles" class="gold-lines-top">
             <div class="container">
                 <div class="section-title text-center mb-5">
-                    <h2>خدماتنا</h2>
-                    <h3>خدماتنا المتميزة</h3>
+                    <h2>الخدمات</h2>
+                    <h3>من خدماتنا المتميزة</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-3 col-sm-4 mb-4">
@@ -240,8 +248,7 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service1.png" alt="service1" class="service-img">
                                 </div>
-                                <h5 class="card-title">التحول الرقمي
-                                    وهيكلة الإجراءات </h5>
+                                <h5 class="card-title">التحول الرقمي وهيكلة الإجراءات </h5>
                                 <p class="card-text">تطوير الأدلة التقنية ، إعادة هندسة العمليات وتحسينها.</p>
                             </div>
                         </div>
@@ -252,8 +259,9 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service2.png" alt="service2" class="service-img">
                                 </div>
-                                <h5 class="card-title">الأمن السيبراني والحماية المتقدمة</h5>
-                                <p class="card-text">الامتثال لمعايير الهيئة الوطنية للأمن السيبراني ، تقييم الثغرات .
+                                <h5 class="card-title">الأمن السيبراني</h5>
+                                <p class="card-text">الامتثال لمعايير الهيئة الوطنية للأمن السيبراني، تقييم الثغرات
+                                    والحماية المتقدمة.
                                 </p>
                             </div>
                         </div>
@@ -264,8 +272,8 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service3.png" alt="service3" class="service-img">
                                 </div>
-                                <h5 class="card-title">الخدمات المدارة والدعم التقنى</h5>
-                                <p class="card-text">دعم تقني وتشغيلي مستمر، إدارة البنية التحتية.</p>
+                                <h5 class="card-title">الخدمات المدارة (Managed Services)</h5>
+                                <p class="card-text">دعم تقني وتشغيلي مستمر، إدارة البنية التحتية. </p>
                             </div>
                         </div>
                     </div>
@@ -275,8 +283,9 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service4.png" alt="service4" class="service-img">
                                 </div>
-                                <h5 class="card-title">تطوير وتخصيص أنظمة ERP</h5>
-                                <p class="card-text">دعم تقني وتشغيلي مستمر، إدارة البنية التحتية.</p>
+                                <h5 class="card-title">أنظمة ERP</h5>
+                                <p class="card-text">تطوير وتخصيص أنظمة أودو ومايكروسوفت داينمكس، تكامل الأنظمة وربطها.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -286,7 +295,7 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service5.png" alt="service5" class="service-img">
                                 </div>
-                                <h5 class="card-title">تحسين أداء الأنظمة السحابية</h5>
+                                <h5 class="card-title">الأنظمة السحابية</h5>
                                 <p class="card-text">ترحيل وإدارة البيانات ، تحسين الأداء السحابي.</p>
                             </div>
                         </div>
@@ -320,9 +329,9 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service8.png" alt="service8" class="service-img">
                                 </div>
-                                <h5 class="card-title">إنشاء وتشغيل
+                                <h5 class="card-title">
                                     المنصات الرقمية</h5>
-                                <p class="card-text">إنشاء وتشغيل المنصات، تطوير الأنظمة الإلكترونية وحلول الأعمال </p>
+                                <p class="card-text">إنشاء وتشغيل المنصات، تطوير الأنظمة الإلكترونية وحلول الأعمال .</p>
                             </div>
                         </div>
                     </div>
@@ -335,7 +344,7 @@
                                 <h5 class="card-title">استشارات تقنية
                                     ودعم فني
                                 </h5>
-                                <p class="card-text">ترحيل وإدارة البيانات ، تحسين الأداء السحابي </p>
+                                <p class="card-text">تخطيط استراتيجي، دعم تقني مخصص. </p>
                             </div>
                         </div>
                     </div>
@@ -348,7 +357,8 @@
                                 <h5 class="card-title">الكاميرات
                                     والأنظمة الأمنية
                                 </h5>
-                                <p class="card-text">مواقع متقدمة، تصميم UI/UX ، هوية بصرية متكاملة.</p>
+                                <p class="card-text"> أنظمة مراقبة وتحكم بالدخول، أنظمة أمنية ومتخصصة بالذكاء الاصطناعي.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -358,10 +368,11 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service11.png" alt="service11" class="service-img">
                                 </div>
-                                <h5 class="card-title">اعداد وتجهيز
+                                <h5 class="card-title"> تجهيز
                                     القاعات الذكية
                                 </h5>
-                                <p class="card-text">Windows / Office / Oracle / Adobe وغيرها.</p>
+                                <p class="card-text">حلول الاجتماعات الذكية والعرض التفاعلي وقاعات العرض والمناسبات.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -374,7 +385,8 @@
                                 <h5 class="card-title">ذكاء الأعمال
                                     ومستودعات البيانات
                                 </h5>
-                                <p class="card-text">إنشاء وتشغيل المنصات، تطوير الأنظمة الإلكترونية وحلول الأعمال.</p>
+                                <p class="card-text">البيانات الضخمة، ذكاء الاعمال، لوحات المعلومات، تكامل البيانات
+                                    وتحليلها.</p>
                             </div>
                         </div>
                     </div>
@@ -399,12 +411,16 @@
                         </div>
                         <div class="swiper clients-swiper clients-swiper-local">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/clients/client1.png" alt="عميل 1"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client2.png" alt="عميل 2"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="عميل 3"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client4.png" alt="عميل 4"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client5.png" alt="عميل 5"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="عميل 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/client1.png"
+                                        alt="عميل 1"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/السيبراني.png"
+                                        alt="عميل 2"></div>
+                                <div class="swiper-slide"><img class="client-img"
+                                        src="./assets/clients/الهيئة الملكية.png" alt="عميل 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/client4.png"
+                                        alt="عميل 4"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/aramco.png"
+                                        alt="عميل 5"></div>
                             </div>
                         </div>
                     </div>
@@ -414,12 +430,16 @@
                         </div>
                         <div class="swiper clients-swiper clients-swiper-international">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/clients/client1.png" alt="شريك 1"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client2.png" alt="شريك 2"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="شريك 3"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client4.png" alt="شريك 4"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client5.png" alt="شريك 5"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="شريك 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner1.png"
+                                        alt="شريك 1"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner2.png"
+                                        alt="شريك 2"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner3.png"
+                                        alt="شريك 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner4.png"
+                                        alt="شريك 4"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner5.png"
+                                        alt="شريك 5"></div>
                             </div>
                         </div>
                     </div>
@@ -573,30 +593,33 @@
                             <foreignObject x="100" y="140" width="180" height="60">
                                 <div xmlns="http://www.w3.org/1999/xhtml"
                                     style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFFFF0A; border-radius: 10px; padding: 5px 12px;height: 100%;">
-                                    <span
-                                        style="font-weight: bold; font-size: 14px; color: #fff;">الولايات
+                                    <span style="font-weight: bold; font-size: 14px; color: #fff;">الولايات
                                         المتحدة</span>
-                                    <span style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">مكتب تمثيلى -
+                                    <span
+                                        style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">مكتب
+                                        تمثيلى -
                                         لندن</span>
                                 </div>
                             </foreignObject>
                             <foreignObject x="480" y="200" width="200" height="70">
                                 <div xmlns="http://www.w3.org/1999/xhtml"
                                     style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFFFF0A; border-radius: 10px; padding: 5px 12px;height: 100%;">
-                                    <span
-                                        style="font-weight: bold; font-size: 14px; color: #fff;">المملكة
+                                    <span style="font-weight: bold; font-size: 14px; color: #fff;">المملكة
                                         العربية السعودية</span>
-                                    <span style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">المقر الرئيسي -
+                                    <span
+                                        style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">المقر
+                                        الرئيسي -
                                         جدة</span>
                                 </div>
                             </foreignObject>
                             <foreignObject x="640" y="260" width="180" height="60">
                                 <div xmlns="http://www.w3.org/1999/xhtml"
                                     style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #FFFFFF0A; border-radius: 10px; padding: 5px 12px;height: 100%;">
-                                    <span
-                                        style="font-weight: bold; font-size: 14px; color: #fff;">الإمارات
+                                    <span style="font-weight: bold; font-size: 14px; color: #fff;">الإمارات
                                         العربية</span>
-                                    <span style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">مركز الأعمال-
+                                    <span
+                                        style="font-size: 12px; background: linear-gradient(232.05deg, #CBA228 28.98%, #EFCA5E 77.99%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; color: unset; margin-top: 2px;">مركز
+                                        الأعمال-
                                         دبى</span>
                                 </div>
                             </foreignObject>
@@ -744,13 +767,13 @@
                     <div class="contact-label">البريد الإلكتروني</div>
                     <a href="mailto:info@iv.sa" class="contact-link">info@iv.sa</a>
                 </div>
-                <div class="contact-info-item text-center flex-fill" style="min-width:200px;">
+                <!-- <div class="contact-info-item text-center flex-fill" style="min-width:200px;">
                     <div class="contact-info-icon">
                         <i class="fa-solid fa-user text-primary"></i>
                     </div>
                     <div class="contact-label">المسؤول</div>
                     <div class="contact-link">حامد خالد حامد أزهر </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -771,35 +794,35 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-    
- 
+
+
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const langToggle = document.getElementById('lang-toggle');
-        const html = document.documentElement;
+        document.addEventListener('DOMContentLoaded', function () {
+            const langToggle = document.getElementById('lang-toggle');
+            const html = document.documentElement;
 
-        // تحقق إن كانت اللغة الحالية عربية
-        let isArabic = html.getAttribute('lang') === 'ar';
+            // تحقق إن كانت اللغة الحالية عربية
+            let isArabic = html.getAttribute('lang') === 'ar';
 
-        langToggle.addEventListener('click', function () {
-            isArabic = !isArabic;
+            langToggle.addEventListener('click', function () {
+                isArabic = !isArabic;
 
-            if (!isArabic) {
-                // التبديل إلى الإنجليزية
-                html.setAttribute('lang', 'en');
-                html.setAttribute('dir', 'ltr');
+                if (!isArabic) {
+                    // التبديل إلى الإنجليزية
+                    html.setAttribute('lang', 'en');
+                    html.setAttribute('dir', 'ltr');
 
-                // تحميل ملف الستايل الخاص بالإنجليزية
-                document.head.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-                    link.href = 'css/style-en.css';
-                });
+                    // تحميل ملف الستايل الخاص بالإنجليزية
+                    document.head.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                        link.href = 'css/style-en.css';
+                    });
 
-                // التوجيه إلى الصفحة الإنجليزية
-                window.location.href = 'index-en.php';
-            }
+                    // التوجيه إلى الصفحة الإنجليزية
+                    window.location.href = 'index-en.php';
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 
     <script>
@@ -909,7 +932,7 @@
             if (infoPanel) {
                 const title = document.getElementById('locationTitle');
                 const description = document.getElementById('locationDescription');
-                
+
                 if (title && description) {
                     title.textContent = location.title;
                     description.textContent = location.description;
@@ -1158,7 +1181,7 @@
             });
         });
     </script>
-     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const headline = document.getElementById('animated-headline');
             if (!headline) return;
