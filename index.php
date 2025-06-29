@@ -86,7 +86,7 @@
             <i class="fa-solid fa-bars text-white"></i>
         </button>
 
-        <img class="logo" src="./assets/Logo.svg" alt="logo">
+        <img class="logo d-lg-none" src="./assets/Logo.svg" alt="logo">
 
     </header>
 
