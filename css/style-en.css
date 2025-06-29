@@ -1271,13 +1271,17 @@ footer p {
   .btn-primary:hover {
     opacity: 0.9;
   }
-  
+
 /* Responsive Enhancements */
 @media (max-width: 1200px) {
   .container,
   .map-container,
   .world-map {
     max-width: 1000px;
+  }
+
+  li.nav-item {
+    padding: 28px 0px;
   }
   .about-us-img,
   .about-us-container {
