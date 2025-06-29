@@ -1299,6 +1299,10 @@ footer p {
   #contact h3 {
     font-size: 40px;
   }
+
+  li.nav-item {
+    padding: 28px 0px;
+  }
 }
 
 /* Medium screens (tablets, >992px) */
@@ -1426,7 +1430,7 @@ footer p {
     display: block;
     margin: 20px auto;
     margin-left: 20px;
-}
+  }
   footer {
     padding: 40px 0 80px 0;
   }
@@ -1571,7 +1575,7 @@ img,
     justify-content: center;
     align-items: center;
   }
- 
+
   li.nav-item {
     padding: 16px 0;
     width: 100%;
