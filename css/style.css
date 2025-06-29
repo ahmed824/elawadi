@@ -561,7 +561,7 @@ h2.about-us-title {
 }
 
 #news .news-card-body {
-  height: 280px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -704,7 +704,7 @@ h2.about-us-title {
   display: flex;
   flex-direction: column-reverse;
   overflow: hidden;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
 
   transition: all 0.3s ease;
 }
