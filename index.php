@@ -774,46 +774,33 @@
     
  
     <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const langToggle = document.getElementById('lang-toggle');
-    const html = document.documentElement;
+    document.addEventListener('DOMContentLoaded', function () {
+        const langToggle = document.getElementById('lang-toggle');
+        const html = document.documentElement;
 
-    // Detect current language from <html lang="..">
-    let isArabic = html.getAttribute('lang') === 'ar';
+        // تحقق إن كانت اللغة الحالية عربية
+        let isArabic = html.getAttribute('lang') === 'ar';
 
-    langToggle.addEventListener('click', function () {
-        isArabic = !isArabic;
+        langToggle.addEventListener('click', function () {
+            isArabic = !isArabic;
 
-        if (isArabic) {
-            // Update UI & attributes for Arabic
-            html.setAttribute('lang', 'ar');
-            html.setAttribute('dir', 'rtl');
-            langToggle.innerHTML = `AR <svg class="lang-svg me-1" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="..." fill="#B0ADA4"/></svg>`;
-            // Redirect to Arabic page if you're not already there
-            if (!window.location.href.includes('index.php')) {
-                window.location.href = 'index.php';
-            } else {
-                // Or switch CSS only if already on index.php
-                const cssLink = document.querySelector('link[rel="stylesheet"]');
-                if (cssLink) cssLink.setAttribute('href', 'css/style.css');
-            }
-        } else {
-            // Update UI & attributes for English
-            html.setAttribute('lang', 'en');
-            html.setAttribute('dir', 'ltr');
-            langToggle.innerHTML = `EN <svg class="lang-svg me-1" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="..." fill="#B0ADA4"/></svg>`;
-            // Redirect to English page if not already there
-            if (!window.location.href.includes('index-en.php')) {
+            if (!isArabic) {
+                // التبديل إلى الإنجليزية
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+
+                // تحميل ملف الستايل الخاص بالإنجليزية
+                document.head.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                    link.href = 'css/style-en.css';
+                });
+
+                // التوجيه إلى الصفحة الإنجليزية
                 window.location.href = 'index-en.php';
-            } else {
-                // Or switch CSS only if already on index-en.php
-                const cssLink = document.querySelector('link[rel="stylesheet"]');
-                if (cssLink) cssLink.setAttribute('href', 'css/style-en.css');
             }
-        }
+        });
     });
-});
 </script>
+
 
     <script>
         gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
