@@ -1,4 +1,3 @@
-<!-- Elwady SVG/GSAP Preloader -->
 <div class="elwady-preloader-container" id="elwady-preloader">
     <div class="elwady-floating-particles"></div>
     <div class="elwady-glow-effect"></div>
@@ -34,7 +33,7 @@
             </defs>
         </svg>
     </div>
-    <div class="elwady-loading-text">جاري التحميل...</div>
+    <div class="elwady-loading-text">Loading...</div>
     <div class="elwady-progress-container">
         <div class="elwady-progress-bar" id="elwady-progressBar"></div>
     </div>
@@ -54,7 +53,7 @@
         align-items: center;
         z-index: 99999;
         transition: opacity 0.5s ease-out;
-        direction: rtl;
+        direction: ltr;
     }
 
     .elwady-preloader-container.fade-out {
@@ -67,12 +66,14 @@
         width: 180px;
         height: 180px;
         margin-bottom: 2rem;
+        opacity: 0; /* Initially hidden to prevent early load */
     }
 
-    .elwady-logo-svg {
+    .elwady-logo-img {
         width: 100%;
         height: 100%;
-        filter: drop-shadow(0 10px 30px rgba(203, 162, 40, 0.13)); /* gold shadow */
+        object-fit: contain;
+        box-shadow: 0 10px 30px rgba(203, 162, 40, 0.13); /* Gold shadow */
     }
 
     .elwady-glow-effect {
@@ -101,6 +102,7 @@
 
     .elwady-loading-text {
         color: #ffffff;
+        font-family: "Tajawal", "IBM Plex Sans", sans-serif;
         font-size: 1.3rem;
         font-weight: 700;
         letter-spacing: 2px;
@@ -122,19 +124,20 @@
 
     .elwady-progress-bar {
         height: 100%;
-        background: linear-gradient(90deg, #cba228 0%, #efca5e 100%);
+        background: var(--elwady-gold-gradient, linear-gradient(90deg, #cba228 0%, #efca5e 100%));
         border-radius: 2px;
         width: 0%;
-        transition: width 0.3s cubic-bezier(.4,0,.2,1);
-        box-shadow: 0 1px 6px #cba22833;
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 1px 6px rgba(203, 162, 40, 0.2);
     }
 
     .elwady-percentage {
         color: #ffffff;
+        font-family: "Tajawal", "IBM Plex Sans", sans-serif;
         font-size: 1rem;
         font-weight: 600;
         opacity: 0.9;
-        text-shadow: 0 1px 4px #efca5e40, 0 1px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 1px 4px rgba(239, 202, 94, 0.25), 0 1px 2px rgba(0, 0, 0, 0.3);
     }
 
     .elwady-floating-particles {
@@ -151,10 +154,10 @@
         position: absolute;
         width: 4px;
         height: 4px;
-        background: linear-gradient(135deg, #cba228 60%, #efca5e 100%);
+        background: var(--elwady-gold-gradient, linear-gradient(135deg, #cba228 60%, #efca5e 100%));
         border-radius: 50%;
         opacity: 0.7;
-        box-shadow: 0 0 6px #cba22844;
+        box-shadow: 0 0 6px rgba(203, 162, 40, 0.27);
     }
 
     @media (max-width: 768px) {
@@ -172,6 +175,29 @@
         .elwady-loading-text {
             font-size: 1rem;
         }
+        .elwady-percentage {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .elwady-logo-container {
+            width: 100px;
+            height: 100px;
+        }
+        .elwady-glow-effect {
+            width: 120px;
+            height: 120px;
+        }
+        .elwady-progress-container {
+            width: 100px;
+        }
+        .elwady-loading-text {
+            font-size: 0.9rem;
+        }
+        .elwady-percentage {
+            font-size: 0.8rem;
+        }
     }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -183,27 +209,28 @@
         const progressBar = document.getElementById('elwady-progressBar');
         const percentage = document.getElementById('elwady-percentage');
         const preloader = document.getElementById('elwady-preloader');
+        const logoContainer = document.querySelector('.elwady-logo-container');
 
         // Create floating particles
         function createParticles() {
             const particleContainer = document.querySelector('.elwady-floating-particles');
-            for (let i = 0; i < 18; i++) {
+            for (let i = 0; i < 12; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'elwady-particle';
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.top = Math.random() * 100 + '%';
                 particleContainer.appendChild(particle);
                 gsap.to(particle, {
-                    x: (Math.random() - 0.5) * 120,
-                    y: (Math.random() - 0.5) * 120,
-                    duration: 2.5 + Math.random() * 1.5,
+                    x: (Math.random() - 0.5) * 100,
+                    y: (Math.random() - 0.5) * 100,
+                    duration: 2 + Math.random() * 1,
                     repeat: -1,
                     yoyo: true,
                     ease: "sine.inOut"
                 });
                 gsap.to(particle, {
-                    opacity: 0.2,
-                    duration: 1 + Math.random(),
+                    opacity: 0.3,
+                    duration: 0.8 + Math.random() * 0.5,
                     repeat: -1,
                     yoyo: true,
                     ease: "sine.inOut"
@@ -213,24 +240,21 @@
 
         // Initialize animations
         function initPreloader() {
-            gsap.set("#main-structure", { opacity: 0, scale: 0.8 });
-            gsap.set("#nodes circle", { scale: 0, transformOrigin: "center" });
+            gsap.set(logoContainer, { opacity: 0, scale: 0.8 });
             gsap.set(".elwady-loading-text", { opacity: 0, y: 20 });
             gsap.set(".elwady-progress-container", { opacity: 0, y: 20 });
             gsap.set(".elwady-percentage", { opacity: 0, y: 20 });
-            tl.to("#main-structure", { opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)" })
-                .to("#nodes circle", { scale: 1, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)" }, "-=0.5")
-                .to(".elwady-loading-text", { opacity: 1, y: 0, duration: 0.5 }, "-=0.3")
-                .to([".elwady-progress-container", ".elwady-percentage"], { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.2");
-            gsap.to("#nodes circle", { scale: 1.2, duration: 1.5, repeat: -1, yoyo: true, stagger: 0.2, ease: "sine.inOut" });
-            gsap.to("#center-node", { rotation: 360, duration: 4, repeat: -1, ease: "none", transformOrigin: "center" });
+            tl.to(logoContainer, { opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)" })
+              .to(".elwady-loading-text", { opacity: 1, y: 0, duration: 0.5 }, "-=0.3")
+              .to([".elwady-progress-container", ".elwady-percentage"], { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.2");
+            gsap.to(logoContainer, { scale: 1.1, duration: 1.5, repeat: -1, yoyo: true, ease: "sine.inOut" });
             gsap.to(".elwady-loading-text", { opacity: 0.6, duration: 1, repeat: -1, yoyo: true, ease: "sine.inOut" });
         }
 
         // Progress simulation
         function simulateProgress() {
             const progressInterval = setInterval(() => {
-                progress += Math.random() * 15 + 5;
+                progress += Math.random() * 10 + 5;
                 if (progress >= 100) {
                     progress = 100;
                     clearInterval(progressInterval);
@@ -238,7 +262,7 @@
                 }
                 progressBar.style.width = progress + '%';
                 percentage.textContent = Math.round(progress) + '%';
-            }, 180);
+            }, 200);
         }
 
         // Hide preloader
@@ -254,11 +278,17 @@
             });
         }
 
-        // Initialize everything
+        // Ensure background loads before logo
         document.addEventListener('DOMContentLoaded', () => {
-            createParticles();
-            initPreloader();
-            simulateProgress();
+            const preloaderContainer = document.querySelector('.elwady-preloader-container');
+            // Set initial background to ensure it loads
+            preloaderContainer.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #16213e 75%, #1a1a2e 100%)';
+            // Start animations and particles after a slight delay to ensure background is rendered
+            setTimeout(() => {
+                createParticles();
+                initPreloader();
+                simulateProgress();
+            }, 100);
         });
     })();
 </script>
