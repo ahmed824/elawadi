@@ -66,14 +66,15 @@
         width: 180px;
         height: 180px;
         margin-bottom: 2rem;
-        opacity: 0; /* Initially hidden to prevent early load */
+        opacity: 0; /* Initially hidden to prevent flash */
+        visibility: hidden; /* Additional protection against flash */
     }
 
-    .elwady-logo-img {
+    .elwady-logo-svg {
         width: 100%;
         height: 100%;
         object-fit: contain;
-        box-shadow: 0 10px 30px rgba(203, 162, 40, 0.13); /* Gold shadow */
+        filter: drop-shadow(0 10px 30px rgba(203, 162, 40, 0.13)); /* Gold drop shadow */
     }
 
     .elwady-glow-effect {
@@ -87,6 +88,7 @@
         border-radius: 50%;
         animation: elwady-pulse 2s infinite;
         z-index: 1;
+        opacity: 0; /* Initially hidden */
     }
 
     @keyframes elwady-pulse {
@@ -210,6 +212,7 @@
         const percentage = document.getElementById('elwady-percentage');
         const preloader = document.getElementById('elwady-preloader');
         const logoContainer = document.querySelector('.elwady-logo-container');
+        const glowEffect = document.querySelector('.elwady-glow-effect');
 
         // Create floating particles
         function createParticles() {
@@ -240,13 +243,20 @@
 
         // Initialize animations
         function initPreloader() {
-            gsap.set(logoContainer, { opacity: 0, scale: 0.8 });
+            // Set initial states to prevent flash
+            gsap.set(logoContainer, { opacity: 0, scale: 0.8, visibility: "visible" });
+            gsap.set(glowEffect, { opacity: 0 });
             gsap.set(".elwady-loading-text", { opacity: 0, y: 20 });
             gsap.set(".elwady-progress-container", { opacity: 0, y: 20 });
             gsap.set(".elwady-percentage", { opacity: 0, y: 20 });
+            
+            // Animate elements in sequence
             tl.to(logoContainer, { opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)" })
+              .to(glowEffect, { opacity: 1, duration: 0.5 }, "-=0.5")
               .to(".elwady-loading-text", { opacity: 1, y: 0, duration: 0.5 }, "-=0.3")
               .to([".elwady-progress-container", ".elwady-percentage"], { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.2");
+            
+            // Continuous animations
             gsap.to(logoContainer, { scale: 1.1, duration: 1.5, repeat: -1, yoyo: true, ease: "sine.inOut" });
             gsap.to(".elwady-loading-text", { opacity: 0.6, duration: 1, repeat: -1, yoyo: true, ease: "sine.inOut" });
         }
@@ -278,17 +288,34 @@
             });
         }
 
-        // Ensure background loads before logo
-        document.addEventListener('DOMContentLoaded', () => {
+        // Wait for GSAP to load and DOM to be ready
+        function waitForGSAP() {
+            if (typeof gsap !== 'undefined') {
+                startPreloader();
+            } else {
+                setTimeout(waitForGSAP, 50);
+            }
+        }
+
+        // Start preloader
+        function startPreloader() {
             const preloaderContainer = document.querySelector('.elwady-preloader-container');
             // Set initial background to ensure it loads
             preloaderContainer.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #16213e 75%, #1a1a2e 100%)';
+            
             // Start animations and particles after a slight delay to ensure background is rendered
             setTimeout(() => {
                 createParticles();
                 initPreloader();
                 simulateProgress();
             }, 100);
-        });
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', waitForGSAP);
+        } else {
+            waitForGSAP();
+        }
     })();
 </script>
