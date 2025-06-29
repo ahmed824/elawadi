@@ -712,7 +712,7 @@
                             </a>
                             <a href="https://www.linkedin.com/" target="_blank" class="social-icon icon-linkedin-sec"
                                 aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
+                                <i class="fab fa-snapchat-ghost"></i>
                             </a>
                         </div>
 

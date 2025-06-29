@@ -923,28 +923,27 @@ textarea.form-control {
 
 /* Positioning at the ends of the V shape */
 .icon-linkedin {
-  top: 9%;
-  right: 4%;
+  top: 10%;
+  left: 3.5%;
 }
 
 .icon-linkedin-sec {
-  top: 93%;
-  right: 46%;
+  top: 94%;
+  left: 45.5%;
 }
-
 .icon-x {
-  top: -2%;
-  left: 3%;
+  top: -2.5%;
+  right: 3%;
 }
 
 .icon-facebook {
-  top: 34%;
-  right: 7%;
+  top: 35%;
+  left: 7%;
 }
 
 .icon-whatsapp {
   top: 22%;
-  left: 7%;
+  right: 7%;
 }
 
 /* Contact info */
