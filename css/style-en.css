@@ -29,6 +29,11 @@ h6 {
   font-weight: 700;
 }
 
+.clients-swiper,
+.clients-swiper .swiper-wrapper {
+    direction: rtl !important;
+}
+
 /* === Custom Scrollbar Styles === */
 ::-webkit-scrollbar {
   width: 10px;

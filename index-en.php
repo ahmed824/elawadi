@@ -238,7 +238,7 @@
             <div class="container">
                 <div class="section-title text-center mb-5">
                     <h2>Our Services</h2>
-                    <h3>Our Distinguished Services</h3>
+                    <h3>How We Can Help ?</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-3 col-sm-4 mb-4">
@@ -391,7 +391,7 @@
         <section id="clients" class="py-5 section-fade">
             <div class="section-title text-start mb-4">
                 <h2>Our Success Partners</h2>
-                <h3>Our Esteemed Clients and Partners</h3>
+                <h3> Esteemed Clients and Partners</h3>
             </div>
             <div class="container">
                 <div class="row">
@@ -401,12 +401,16 @@
                         </div>
                         <div class="swiper clients-swiper clients-swiper-local">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/clients/client1.png" alt="Client 1"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client2.png" alt="Client 2"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="Client 3"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client4.png" alt="Client 4"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client5.png" alt="Client 5"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="Client 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/client1.png"
+                                        alt="عميل 1"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/security.png"
+                                        alt="عميل 2"></div>
+                                <div class="swiper-slide"><img class="client-img"
+                                        src="./assets/clients/Royal-Commission.png" alt="عميل 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/client4.png"
+                                        alt="عميل 4"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/aramco.png"
+                                        alt="عميل 5"></div>
                             </div>
                         </div>
                     </div>
@@ -416,12 +420,16 @@
                         </div>
                         <div class="swiper clients-swiper clients-swiper-international">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="./assets/clients/client1.png" alt="Partner 1"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client2.png" alt="Partner 2"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="Partner 3"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client4.png" alt="Partner 4"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client5.png" alt="Partner 5"></div>
-                                <div class="swiper-slide"><img src="./assets/clients/client3.png" alt="Partner 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner1.png"
+                                        alt="شريك 1"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner2.png"
+                                        alt="شريك 2"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner3.png"
+                                        alt="شريك 3"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner4.png"
+                                        alt="شريك 4"></div>
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/partner5.png"
+                                        alt="شريك 5"></div>
                             </div>
                         </div>
                     </div>
@@ -642,7 +650,7 @@
                     </div>
                     <div class="col-lg-6 section-title text-center mb-5 mt-4 mt-lg-0">
                         <h2>Contact Us</h2>
-                        <h3>Leave Us Your Message, We Are Here to Receive Your Request.</h3>
+                        <h3>Send a message, we’re here to assist you.</h3>
                         <div class="social-media-container section-fade">
                             <img src="./assets/styles/v.png" alt="decoration V shape" class="v-img">
                             <a href="https://www.linkedin.com/" target="_blank" class="social-icon icon-linkedin"

@@ -152,7 +152,7 @@
                         </h2>
                         <p class="about-us-description">
                             الوادي الدولي هي شركة سعودية رائدة تقدم حلولاً تقنية متكاملة، تركز على تمكين التحول الرقمي
-                            والأمن السيبراني وخدمات الأنظمة، للجهات الحكومية وكبرى جهات القطاع الخاص
+                            والأمن السيبراني وخدمات الأنظمة، للجهات الحكومية وكبرى جهات القطاع الخاص.
                         </p>
                         <div class="about-us-mission-vision d-flex   gap-3 mt-3">
                             <div class="d-flex align-items-center gap-3">
@@ -188,7 +188,7 @@
                                 <div>
                                     <h5 class="mb-1">رؤيتنا</h5>
                                     <p class="mb-0 small">أن نكون الشريك التقني الأول في المملكة والمنطقة لتمكين التحول
-                                        الرقمي الشامل وبناء مستقبل مستدام من الابتكار والتطور الرقمي</p>
+                                        الرقمي الشامل وبناء مستقبل مستدام من الابتكار والتطور الرقمي.</p>
                                 </div>
                             </div>
 
@@ -210,7 +210,7 @@
                                     <h5 class="mb-1">رسالتنا</h5>
                                     <p class="mb-0 small">نقدم حلولاً تقنية واستثمارية متكاملة بتركيز على التحول الرقمي
                                         والأمن السيبراني، لتمكين عملائنا من التميز والنمو المستدام، عبر خبراتنا
-                                        وشراكاتنا</p>
+                                        وشراكاتنا.</p>
                                 </div>
                             </div>
 
@@ -272,7 +272,7 @@
                                 <div class="service-img-bg mb-3">
                                     <img src="./assets/services/service3.png" alt="service3" class="service-img">
                                 </div>
-                                <h5 class="card-title">الخدمات المدارة (Managed Services)</h5>
+                                <h5 class="card-title">الخدمات المدارة</h5>
                                 <p class="card-text">دعم تقني وتشغيلي مستمر، إدارة البنية التحتية. </p>
                             </div>
                         </div>
@@ -413,10 +413,10 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img class="client-img" src="./assets/clients/client1.png"
                                         alt="عميل 1"></div>
-                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/السيبراني.png"
+                                <div class="swiper-slide"><img class="client-img" src="./assets/clients/security.png"
                                         alt="عميل 2"></div>
                                 <div class="swiper-slide"><img class="client-img"
-                                        src="./assets/clients/الهيئة الملكية.png" alt="عميل 3"></div>
+                                        src="./assets/clients/Royal-Commission.png" alt="عميل 3"></div>
                                 <div class="swiper-slide"><img class="client-img" src="./assets/clients/client4.png"
                                         alt="عميل 4"></div>
                                 <div class="swiper-slide"><img class="client-img" src="./assets/clients/aramco.png"
@@ -552,7 +552,7 @@
                 <div class="container">
                     <div class="section-title text-center mb-5">
                         <h2>تواجدنا العالمي</h2>
-                        <h3>أماكن تواجدنا</h3>
+                        <h3>أين تجدنا؟</h3>
                     </div>
                     <div class="stars" id="stars"></div>
                     <div class="map-container">
@@ -783,7 +783,7 @@
         <div class="container">
             <img src="./assets/footer-logo.svg" class="footer-logo" alt="Footerlogo">
             <p> شركة سعودية رائدة تقدم حلولاً تقنية متكاملة، تركز على تمكين التحول الرقمي والأمن السيبراني وخدمات
-                الأنظمة، للجهات الحكومية وكبرى جهات القطاع الخاص</p>
+                الأنظمة، للجهات الحكومية وكبرى جهات القطاع الخاص.</p>
         </div>
         <img src="./assets/styles/bottom-style.png" alt="styles circles" class="gold-lines-bottom">
     </footer>
