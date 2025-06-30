@@ -1,19 +1,21 @@
 /* General Styles */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Tajawal", sans-serif;
   color: #333;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
-  --elwady-gold-gradient: linear-gradient(
-    243.55deg,
-    #cba228 20.52%,
-    #efca5e 56.71%
-  );
+  --elwady-gold-gradient: linear-gradient(243.55deg,
+      #cba228 20.52%,
+      #efca5e 56.71%);
   --secondry-color: #66635b;
 }
 
@@ -31,14 +33,17 @@ h6 {
   width: 10px;
   background: #181828;
 }
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(47.89deg, #cba228 2.51%, #efca5e 82.66%);
   border-radius: 8px;
   min-height: 40px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(47.89deg, #efca5e 2.51%, #cba228 82.66%);
 }
+
 ::-webkit-scrollbar-corner {
   background: #181828;
 }
@@ -54,6 +59,7 @@ html {
   background: #efca5e;
   color: #181828;
 }
+
 ::-moz-selection {
   background: linear-gradient(47.89deg, #cba228 2.51%, #efca5e 82.66%);
   color: #181828;
@@ -68,6 +74,7 @@ html {
   color: unset;
   font-size: 24px;
 }
+
 .section-title h2 {
   background: linear-gradient(115.21deg, #cba228 75.33%, #efca5e 82.06%);
   -webkit-background-clip: text;
@@ -98,7 +105,7 @@ html {
 }
 
 /* Header */
- 
+
 
 .blur-bg {
   backdrop-filter: blur(2px);
@@ -152,13 +159,13 @@ html {
 
 li.nav-item {
   padding: 28px 20px;
-  border-bottom: 1px solid transparent; /* Must be transparent to see gradient */
-  border-image-source: linear-gradient(
-    47.89deg,
-    rgba(203, 162, 40, 0.15) 2.51%,
-    rgba(239, 202, 94, 0.15) 82.66%
-  );
-  border-image-slice: 1; /* Required to apply the gradient */
+  border-bottom: 1px solid transparent;
+  /* Must be transparent to see gradient */
+  border-image-source: linear-gradient(47.89deg,
+      rgba(203, 162, 40, 0.15) 2.51%,
+      rgba(239, 202, 94, 0.15) 82.66%);
+  border-image-slice: 1;
+  /* Required to apply the gradient */
 
   display: flex;
   align-items: center;
@@ -182,11 +189,9 @@ li.nav-item {
 .hero {
   height: 100vh;
   color: white;
-  background: radial-gradient(
-      55.35% 55.35% at 50% 50%,
+  background: radial-gradient(55.35% 55.35% at 50% 50%,
       #000000 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    ),
+      rgba(0, 0, 0, 0.5) 100%),
     url("../assets/hero-image.png") center center/cover no-repeat;
 }
 
@@ -263,6 +268,7 @@ li.nav-item {
   z-index: -1;
   pointer-events: none;
 }
+
 #about p {
   font-weight: 400;
   font-size: 18px;
@@ -333,6 +339,7 @@ h2.about-us-title {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
@@ -385,15 +392,19 @@ h2.about-us-title {
 .icon:nth-child(1) {
   transform: rotate(0deg) translate(247px) rotate(-0deg);
 }
+
 .icon:nth-child(2) {
   transform: rotate(72deg) translate(247px) rotate(-72deg);
 }
+
 .icon:nth-child(3) {
   transform: rotate(144deg) translate(266px) rotate(-144deg);
 }
+
 .icon:nth-child(4) {
   transform: rotate(216deg) translate(283px) rotate(-216deg);
 }
+
 .icon:nth-child(5) {
   transform: rotate(288deg) translate(270px) rotate(-288deg);
 }
@@ -402,15 +413,19 @@ h2.about-us-title {
 .dot:nth-child(6) {
   transform: rotate(36deg) translate(277px) rotate(-36deg);
 }
+
 .dot:nth-child(7) {
   transform: rotate(108deg) translate(274px) rotate(-108deg);
 }
+
 .dot:nth-child(8) {
   transform: rotate(180deg) translate(257px) rotate(-180deg);
 }
+
 .dot:nth-child(9) {
   transform: rotate(252deg) translate(250px) rotate(-252deg);
 }
+
 .dot:nth-child(10) {
   transform: rotate(324deg) translate(262px) rotate(-324deg);
 }
@@ -425,6 +440,7 @@ h2.about-us-title {
 .about-us-counters {
   padding: 60px 0;
 }
+
 .about-us-counters h4 {
   font-family: IBM Plex Sans Arabic;
   font-weight: 700;
@@ -486,7 +502,8 @@ h2.about-us-title {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .about-us-container {
-    max-width: 300px; /* Smaller size for tablets */
+    max-width: 300px;
+    /* Smaller size for tablets */
   }
 
   .icon-circle {
@@ -506,7 +523,8 @@ h2.about-us-title {
 
 @media (max-width: 576px) {
   .about-us-container {
-    max-width: 250px; /* Even smaller for mobile */
+    max-width: 250px;
+    /* Even smaller for mobile */
   }
 }
 
@@ -601,10 +619,14 @@ h2.about-us-title {
   font-size: 18px;
   line-height: 28.8px;
   text-align: center;
-  display: inline-block; /* or display: block; with a set width */
-  width: fit-content; /* adjusts width to content */
-  max-width: 65%; /* ensures it doesn't overflow */
+  display: inline-block;
+  /* or display: block; with a set width */
+  width: fit-content;
+  /* adjusts width to content */
+  max-width: 65%;
+  /* ensures it doesn't overflow */
 }
+
 .service-card .card-text {
   color: #b0ada4;
   font-weight: 400;
@@ -623,6 +645,7 @@ h2.about-us-title {
   height: 70px;
   margin: 0 auto 1rem auto;
 }
+
 .service-img {
   width: auto;
   height: auto;
@@ -635,6 +658,7 @@ h2.about-us-title {
 #clients {
   padding: 110px 0;
 }
+
 #clients .swiper-slide {
   display: flex;
   justify-content: center;
@@ -642,6 +666,7 @@ h2.about-us-title {
 
   transition: all 0.3s;
 }
+
 #clients .swiper-slide:hover {
   filter: grayscale(0);
   opacity: 1;
@@ -696,6 +721,7 @@ h2.about-us-title {
   text-align: center;
   color: #000000;
 }
+
 #news .news-card {
   margin-bottom: 40px;
   border: 1px solid #f0f0f0;
@@ -716,7 +742,8 @@ h2.about-us-title {
 }
 
 .news-swiper .swiper-slide.swiper-slide-prev {
-  position: relative; /* Ensure positioning context for overlay */
+  position: relative;
+  /* Ensure positioning context for overlay */
 }
 
 .news-swiper .swiper-slide.swiper-slide-prev::before {
@@ -726,8 +753,10 @@ h2.about-us-title {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent black overlay */
-  z-index: 1; /* Place overlay above content */
+  background: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent black overlay */
+  z-index: 1;
+  /* Place overlay above content */
 }
 
 .news-swiper .swiper-slide.swiper-slide-active::before,
@@ -742,8 +771,10 @@ h2.about-us-title {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent black overlay */
-  z-index: 1; /* Place overlay above content */
+  background: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent black overlay */
+  z-index: 1;
+  /* Place overlay above content */
 }
 
 img.card-img-top {
@@ -768,8 +799,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-clip: text;
   text-fill-color: transparent;
   width: fit-content;
-  margin: ;
 }
+
 .date-container span {
   font-weight: 500;
   font-size: 18px;
@@ -794,6 +825,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   line-height: 24px;
   text-transform: capitalize;
 }
+
 .btn-primary:hover {
   opacity: 0.9;
 }
@@ -838,6 +870,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 #contact {
   padding: 100px 0;
 }
+
 #contact form {
   background: #fff;
   padding: 50px 30px;
@@ -905,6 +938,7 @@ input#phone {
 textarea.form-control {
   border-radius: 10px !important;
 }
+
 .form-control:focus {
   background: transparent;
   border: 1px solid #cba228;
@@ -940,7 +974,8 @@ textarea.form-control {
   justify-content: center;
   padding: 6px;
   transition: transform 0.3s ease;
-  color: #000; /* Default color, can be overridden per icon */
+  color: #000;
+  /* Default color, can be overridden per icon */
   font-size: 20px;
   text-decoration: none !important;
   font-size: 28px;
@@ -961,6 +996,7 @@ textarea.form-control {
   top: 94%;
   left: 45.5%;
 }
+
 .icon-x {
   top: -1.5%;
   right: 3%;
@@ -1049,11 +1085,13 @@ footer p {
   cursor: pointer;
   overflow: visible;
 }
+
 .whatsapp-float svg {
   width: 36px;
   height: 36px;
   display: block;
 }
+
 .whatsapp-float::after {
   content: "";
   position: absolute;
@@ -1068,20 +1106,24 @@ footer p {
   z-index: -1;
   animation: whatsapp-ripple 1.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 @keyframes whatsapp-ripple {
   0% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.5;
   }
+
   70% {
     transform: translate(-50%, -50%) scale(1.7);
     opacity: 0.1;
   }
+
   100% {
     transform: translate(-50%, -50%) scale(2);
     opacity: 0;
   }
 }
+
 .whatsapp-float:hover {
   box-shadow: 0 8px 32px rgba(203, 162, 40, 0.35);
   transform: scale(1.07);
@@ -1090,15 +1132,18 @@ footer p {
 .wa-drop-in {
   animation: wa-drop-in-anim 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 @keyframes wa-drop-in-anim {
   0% {
     transform: translateY(80px) scale(0.8);
     opacity: 0;
   }
+
   80% {
     transform: translateY(-8px) scale(1.05);
     opacity: 1;
   }
+
   100% {
     transform: translateY(0) scale(1);
     opacity: 1;
@@ -1128,8 +1173,7 @@ footer p {
   max-width: 1200px;
   max-height: 800px;
   object-fit: contain;
-  filter: brightness(0.3) contrast(1.2)
-    drop-shadow(0 0 20px rgba(255, 215, 0, 0.2));
+  filter: brightness(0.3) contrast(1.2) drop-shadow(0 0 20px rgba(255, 215, 0, 0.2));
   border-radius: 15px;
 }
 
@@ -1176,6 +1220,7 @@ footer p {
 }
 
 @keyframes moveToBottomCenter {
+
   0%,
   100% {
     transform: translate(0, 0) scale(1);
@@ -1183,18 +1228,22 @@ footer p {
   }
 
   50% {
-    transform: translate(50px, 100px) scale(1.2); /* adjust values as needed */
+    transform: translate(50px, 100px) scale(1.2);
+    /* adjust values as needed */
     opacity: 0.7;
   }
 }
 
 .location-label {
   fill: #ffd700;
-  font-size: 12px; /* Reduced from 14px for a narrower footprint */
+  font-size: 12px;
+  /* Reduced from 14px for a narrower footprint */
   font-weight: bold;
   text-anchor: middle;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Slightly smaller shadow for compactness */
-  letter-spacing: -0.5px; /* Tightens character spacing to reduce width */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  /* Slightly smaller shadow for compactness */
+  letter-spacing: -0.5px;
+  /* Tightens character spacing to reduce width */
   pointer-events: none;
   opacity: 1;
 }
@@ -1277,6 +1326,7 @@ footer p {
 }
 
 @keyframes twinkle {
+
   0%,
   100% {
     opacity: 0.3;
@@ -1291,19 +1341,23 @@ footer p {
 
 /* Large screens (desktops, >1200px) */
 @media (max-width: 1200px) {
+
   .container,
   .map-container,
   .world-map {
     max-width: 1000px;
   }
+
   .about-us-img,
   .about-us-container {
     max-width: 320px;
     height: auto;
   }
+
   h2.about-us-title {
     font-size: 40px;
   }
+
   #services .section-title h3,
   #clients .section-title h3,
   #contact h3 {
@@ -1320,32 +1374,39 @@ footer p {
   .hero h1 {
     font-size: 48px;
   }
+
   .about-us-img,
   .about-us-container {
     max-width: 220px;
     height: auto;
   }
+
   .about-us-counters {
     flex-direction: column !important;
     gap: 24px;
     padding: 30px 0;
   }
+
   .count-card {
     width: 100px;
   }
+
   #services .section-title h3,
   #clients .section-title h3,
   #contact h3 {
     font-size: 32px;
   }
+
   .service-card {
     max-width: 180px;
   }
+
   .map-background,
   .world-map {
     max-width: 700px;
     max-height: 400px;
   }
+
   .info-panel {
     top: 20px;
     right: 10px;
@@ -1366,23 +1427,29 @@ footer p {
     padding: 10px 44px;
     font-size: 12px;
   }
+
   .contact-info-section .content {
     flex-direction: column !important;
   }
+
   .hero {
     height: 70vh;
     padding: 40px 0;
   }
+
   .hero h1 {
     font-size: 32px;
   }
+
   .hero h2 {
     font-size: 18px;
   }
+
   .hero h3 {
     font-size: 14px;
     padding: 10px 10px;
   }
+
   .about-us-img,
   .about-us-container {
     max-width: 150px;
@@ -1394,33 +1461,41 @@ footer p {
     font-size: 14px;
     max-width: 100%;
   }
+
   h2.about-us-title {
     font-size: 24px;
   }
+
   .about-us-counters h4 {
     font-size: 32px;
   }
+
   .about-us-counters span.small {
     font-size: 12px;
   }
+
   .service-card {
     max-width: 100%;
     margin: 0 auto 20px auto;
   }
+
   #services {
     padding: 60px 0 !important;
   }
+
   #services .section-title h3,
   #clients .section-title h3,
   #contact h3 {
     font-size: 20px;
     padding: 0 10px;
   }
+
   .map-background,
   .world-map {
     max-width: 100vw;
     max-height: 220px;
   }
+
   .info-panel {
     top: 10px;
     right: 0;
@@ -1434,6 +1509,7 @@ footer p {
     width: 120px;
     height: auto;
   }
+
   .logo {
     max-width: 72px;
     height: auto;
@@ -1441,6 +1517,7 @@ footer p {
     margin: 20px auto;
     margin-left: 20px;
   }
+
   footer {
     padding: 40px 0 80px 0;
   }
@@ -1451,16 +1528,19 @@ footer p {
   .navbar-brand {
     padding: 10px 10px;
   }
+
   .nav-link,
   li.nav-item {
     padding: 10px 5px;
     font-size: 14px;
   }
+
   .logo {
     margin-bottom: -40px;
     width: 60px;
     height: auto;
   }
+
   .about-us-container {
     max-width: 120px;
   }
@@ -1469,62 +1549,77 @@ footer p {
     display: flex;
     flex-direction: column;
   }
+
   .about-us-mission-vision svg {
     width: 60px !important;
   }
+
   .count-card {
     width: 80px;
   }
+
   .service-card {
     max-width: 100%;
     margin-bottom: 16px;
   }
+
   #news .news-card-body {
     padding: 10px 10px 10px 10px;
     height: auto;
   }
+
   #news .card-body h5.card-title {
     font-size: 18px;
     margin-bottom: 10px;
   }
+
   #news .card-body .card-text {
     font-size: 12px;
   }
+
   img.card-img-top {
     height: 120px;
   }
+
   .btn-primary {
     font-size: 14px;
     padding: 10px 0;
   }
+
   .contact-info-item {
     flex-direction: column;
     gap: 2px;
     min-width: 100px !important;
   }
+
   .contact-info-icon {
     width: 36px;
     height: 36px;
     padding: 6px;
   }
+
   .contact-label,
   .contact-link {
     font-size: 12px;
   }
+
   .footer-logo {
     width: 80px;
     margin-bottom: 10px;
   }
+
   footer p {
     font-size: 12px;
     width: 90%;
   }
+
   .whatsapp-float {
     width: 44px;
     height: 44px;
     bottom: 12px;
     right: 12px;
   }
+
   .whatsapp-float svg {
     width: 24px;
     height: 24px;
@@ -1536,6 +1631,7 @@ footer p {
   .hero h1 {
     font-size: 20px;
   }
+
   .about-us-title,
   #services .section-title h3,
   #clients .section-title h3,
@@ -1546,6 +1642,7 @@ footer p {
   .footer-logo {
     width: 50px;
   }
+
   .info-panel {
     font-size: 10px;
     padding: 4px;
@@ -1574,10 +1671,12 @@ img,
     margin: 0;
     position: static;
   }
+
   .navbar-expand-lg .navbar-nav::after,
   .navbar-expand-lg .navbar-nav::before {
     display: none;
   }
+
   .navbar-brand {
     padding: 20px 0;
     margin: 0 auto;
@@ -1593,6 +1692,7 @@ img,
     border-bottom: 1px solid #ececec;
     border-image: none;
   }
+
   .nav-link {
     font-size: 1.1rem;
     width: 100%;
@@ -1600,6 +1700,7 @@ img,
     padding: 8px 24px;
     margin: 0;
   }
+
   #lang-toggle {
     width: 100%;
     text-align: right;
@@ -1612,14 +1713,17 @@ img,
   .navbar-brand {
     padding: 10px 0;
   }
+
   .logo {
     max-width: 90px;
   }
+
   .nav-link,
   #lang-toggle {
     font-size: 1rem;
     padding: 8px 16px;
   }
+
   li.nav-item {
     padding: 12px 0;
   }
@@ -1643,19 +1747,23 @@ img,
   padding: 0 0 32px 0;
   overflow-y: auto;
 }
+
 .side-nav.open {
   transform: translateX(0);
 }
+
 .side-nav-header {
   padding: 32px 24px 16px 24px;
   border-bottom: 1px solid #22223a;
   background: transparent;
 }
+
 .side-nav .logo {
   width: 80px;
   height: auto;
   margin: 0;
 }
+
 .close-side-nav {
   background: none;
   border: none;
@@ -1664,6 +1772,7 @@ img,
   cursor: pointer;
   margin-right: 8px;
 }
+
 .side-nav-links {
   list-style: none;
   padding: 32px 24px 0 24px;
@@ -1672,6 +1781,7 @@ img,
   flex-direction: column;
   gap: 24px;
 }
+
 .side-nav-links a,
 .side-nav-links button {
   color: #fff;
@@ -1684,10 +1794,12 @@ img,
   padding: 0;
   transition: color 0.2s;
 }
+
 .side-nav-links a:hover,
 .side-nav-links button:hover {
   color: #ffd700;
 }
+
 .side-nav-overlay {
   position: fixed;
   top: 0;
@@ -1700,10 +1812,12 @@ img,
   pointer-events: none;
   transition: opacity 0.3s;
 }
+
 .side-nav-overlay.open {
   opacity: 1;
   pointer-events: auto;
 }
+
 .side-nav-toggler {
   position: absolute;
   top: 24px;
@@ -1719,17 +1833,21 @@ img,
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 @media (min-width: 992px) {
+
   .side-nav,
   .side-nav-overlay,
   .side-nav-toggler {
     display: none !important;
   }
 }
+
 @media (max-width: 991.98px) {
   .navbar-expand-lg {
     display: none !important;
   }
+
   .side-nav,
   .side-nav-overlay,
   .side-nav-toggler {
@@ -1740,6 +1858,7 @@ img,
     position: absolute;
   }
 }
+
 /* === Starry Background for Side Nav === */
 .nav-stars-bg {
   position: absolute;
@@ -1753,6 +1872,7 @@ img,
   overflow: hidden;
   pointer-events: none;
 }
+
 .nav-star {
   position: absolute;
   background: radial-gradient(circle, #fff 60%, #ffd700 100%);
@@ -1763,21 +1883,26 @@ img,
   animation: nav-star-twinkle 2.5s infinite alternate,
     nav-star-move 12s linear infinite;
 }
+
 @keyframes nav-star-twinkle {
+
   0%,
   100% {
     opacity: 0.5;
     filter: blur(0.5px);
   }
+
   50% {
     opacity: 1;
     filter: blur(1.5px);
   }
 }
+
 @keyframes nav-star-move {
   0% {
     transform: translateY(0) scale(1);
   }
+
   100% {
     transform: translateY(10px) scale(1.1);
   }
@@ -1788,12 +1913,15 @@ img,
   position: relative;
   font-size: 72px;
   font-weight: 700;
-  height: 100px; /* Fixed height for layout stability, adjust as needed */
-  line-height: 90px; /* Vertically center text */
+  height: 100px;
+  /* Fixed height for layout stability, adjust as needed */
+  line-height: 90px;
+  /* Vertically center text */
   white-space: nowrap;
   overflow: hidden;
   vertical-align: middle;
 }
+
 .typewriter .cursor {
   display: inline-block;
   color: #cba228;
@@ -1803,6 +1931,7 @@ img,
   vertical-align: middle;
   /* No animation, always visible */
 }
+
 @media (max-width: 992px) {
   .typewriter {
     font-size: 40px;
@@ -1810,6 +1939,7 @@ img,
     line-height: 50px;
   }
 }
+
 @media (max-width: 576px) {
   .typewriter {
     font-size: 24px;
@@ -1854,6 +1984,7 @@ img,
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
